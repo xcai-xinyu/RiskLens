@@ -1,0 +1,102 @@
+# =========================
+# Secrets / Environment
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python virtual environments
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Python cache / bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Testing / tooling caches
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# IDE / editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Local databases
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# RiskLens local/generated data
+# =========================
+data/private/
+data/documents/
+data/vector/
+evaluation/results/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.bak
+
+# Public pre-v1 snapshot: preserve these locally; never blanket-add them.
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+/data/sample/*.pdf
+/evaluation/candidates/
+/evaluation/proposals/
+/evaluation/archive/
+/evaluation/review/
+/evaluation/audit/*
+# Two unchanged, sanitized engineering dependencies used by existing tests.
+!/evaluation/audit/P2/
+/evaluation/audit/P2/*
+!/evaluation/audit/P2/attempt-002/
+/evaluation/audit/P2/attempt-002/*
+!/evaluation/audit/P2/attempt-002/artifacts/
+/evaluation/audit/P2/attempt-002/artifacts/*
+!/evaluation/audit/P2/attempt-002/artifacts/examples/
+/evaluation/audit/P2/attempt-002/artifacts/examples/*
+!/evaluation/audit/P2/attempt-002/artifacts/examples/synthetic_report.json
+!/evaluation/audit/P3/
+/evaluation/audit/P3/*
+!/evaluation/audit/P3/attempt-001/
+/evaluation/audit/P3/attempt-001/*
+!/evaluation/audit/P3/attempt-001/artifacts/
+/evaluation/audit/P3/attempt-001/artifacts/*
+!/evaluation/audit/P3/attempt-001/artifacts/source/
+/evaluation/audit/P3/attempt-001/artifacts/source/*
+!/evaluation/audit/P3/attempt-001/artifacts/source/tests/
+/evaluation/audit/P3/attempt-001/artifacts/source/tests/*
+!/evaluation/audit/P3/attempt-001/artifacts/source/tests/test_p3.py

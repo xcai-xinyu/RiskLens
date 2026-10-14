@@ -1,0 +1,24 @@
+{
+  "version": "p3-history-v1",
+  "label": "SYNTHETIC engineering surface/persistence fixture; not live-model evaluation",
+  "source_report": "evaluation/audit/P2/attempt-002/artifacts/examples/synthetic_report.json",
+  "non_comparable": {
+    "left_as_of_date": "2025-02-13",
+    "right_as_of_date": "2025-03-01",
+    "right_corpus_version": "h3-synthetic-reduced-v1",
+    "right_corpus_hash": "h3-reduced-coverage-fixture",
+    "right_model": "h3-other-fixture-model",
+    "right_source_count": 0,
+    "expected_reasons": ["sources_differs", "corpus_hash_differs", "model_differs", "incomplete_research_coverage"],
+    "directly_comparable": false,
+    "risk_change_conclusion": null
+  },
+  "interrupted": {
+    "previous_statuses": ["queued", "running"],
+    "internal_status": "interrupted",
+    "public_status": "failed",
+    "stage": "interrupted",
+    "error_code": "process_interrupted",
+    "automatic_resume": false
+  }
+}

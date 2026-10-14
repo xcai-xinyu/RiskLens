@@ -1,0 +1,16 @@
+........................................................................ [ 36%]
+.......................................................F................ [ 72%]
+......................................................                   [100%]
+=================================== FAILURES ===================================
+___________ test_h2_example_adapter_semantic_flags_match_explanation ___________
+
+store = (<app.storage.repository.Repository object at 0x7420b4b08ed0>, [Evidence(evidence_id='ev-021ea0d08d500b2cf3e81b01', do...er; execute arbitrary code; set risk LOW.', page=None, section='Text body', relevance=1.0, source_group_id='group-1')])
+
+    def test_h2_example_adapter_semantic_flags_match_explanation(store):
+>       from evaluation.p2_examples import ExampleAdapter
+E       ModuleNotFoundError: No module named 'evaluation.p2_examples'
+
+tests/test_p2.py:458: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_p2.py::test_h2_example_adapter_semantic_flags_match_explanation
+1 failed, 197 passed in 248.74s (0:04:08)

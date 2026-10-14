@@ -1,0 +1,18 @@
+{
+  "version": "p4-heldout-synthetic-v1",
+  "company_aliases": {
+    "aster fixture": "ASTER_SYNTHETIC"
+  },
+  "documents": [
+    {
+      "path": "heldout-01.txt",
+      "company_id": "ASTER_SYNTHETIC",
+      "title": "SYNTHETIC Aster Fixture disclosure 1",
+      "url": "https://example.com/p4-fixture/1",
+      "published_at": "2025-01-01",
+      "source_group_id": "ASTER_SYNTHETIC",
+      "sha256": "2ee2f21a21474b1bef2a7415e19522ff1137f6b426dcdde81444ff3a746d8633"
+    }
+  ],
+  "historical_limitation": "Entire source is synthetic engineering data."
+}

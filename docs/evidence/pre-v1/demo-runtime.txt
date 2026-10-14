@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/pre_v1_runtime.py", line 45, in <module>
+    api=start_api()
+        ^^^^^^^^^^^
+  File "/tmp/pre_v1_runtime.py", line 26, in start_api
+    with socket.socket() as probe:
+         ^^^^^^^^^^^^^^^
+  File "<home>/.local/share/uv/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/socket.py", line 232, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted

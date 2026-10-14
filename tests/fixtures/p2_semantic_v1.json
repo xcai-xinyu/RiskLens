@@ -1,0 +1,47 @@
+{
+  "draft-liquidity-1": {
+    "text": "Coinbase reported $9.3 billion in $USD resources at the end of Q4 2024; this company-defined measure includes cash and cash equivalents and net USDC.",
+    "decision": {
+      "status": "supported",
+      "explanation": "Company disclosure gives $9.3 billion and explicitly defines USD resources to include net USDC.",
+      "conflicts": [],
+      "overstatement": false
+    }
+  },
+  "draft-liquidity-2": {
+    "text": "Coinbase stated that its $USD resources increased $1.1 billion quarter over quarter in Q4 2024.",
+    "decision": {
+      "status": "supported",
+      "explanation": "Company explicitly states a $1.1 billion Q/Q increase.",
+      "conflicts": [],
+      "overstatement": false
+    }
+  },
+  "draft-liquidity-3": {
+    "text": "The disclosed $USD resources measure should not be treated as cash alone because it also includes net USDC; these disclosures alone do not establish a final liquidity risk level.",
+    "decision": {
+      "status": "supported",
+      "explanation": "Definition includes net USDC; this limited inference does not assign a risk level.",
+      "conflicts": [],
+      "overstatement": false
+    }
+  },
+  "draft-regulatory-1": {
+    "text": "Coinbase reported that a district court granted its request for interlocutory appeal in January 2025 in its ongoing SEC litigation.",
+    "decision": {
+      "status": "supported",
+      "explanation": "The letter describes the January interlocutory appeal grant; claim preserves company attribution.",
+      "conflicts": [],
+      "overstatement": false
+    }
+  },
+  "draft-regulatory-2": {
+    "text": "Coinbase stated that discovery was paused pending the outcome of the interlocutory appeal process; this is a company disclosure, not an independent legal finding.",
+    "decision": {
+      "status": "supported",
+      "explanation": "The letter states discovery is paused pending this process; claim preserves attribution.",
+      "conflicts": [],
+      "overstatement": false
+    }
+  }
+}

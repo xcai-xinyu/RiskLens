@@ -1,0 +1,17 @@
+{
+  "branch": "pre-v1",
+  "history": "Independent root snapshot; master and baseline commit retained locally, not rewritten. Baseline author metadata with workstation hostname is not part of pushed ancestry.",
+  "included": "Application, API/UI, existing tests/fixtures, frozen p4-v1/v2 engineering data, portable docs, two unchanged historical test dependencies, new sanitized evidence.",
+  "excluded": [
+    ".env and secret configuration",
+    "virtual environment and caches",
+    "SQLite databases and vector/document stores",
+    "complete original third-party PDFs",
+    "complete local audit and experiment logs",
+    "real-company v3 candidate/review/held-out materials",
+    "local worktree personal paths"
+  ],
+  "data_integrity": "Original frozen sources, labels, scorer, prompts, rubric, candidate materials and sealed audit paths unchanged locally.",
+  "secret_scan": "Pattern/path scan and explicit file review; known example.com test sentinel adjudicated, no real credential found. This is not a proof of absence of all possible secrets.",
+  "approval": "User explicitly authorized pre-v1 commit/push only; H4/H5 unchanged."
+}

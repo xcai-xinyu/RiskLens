@@ -1,0 +1,15 @@
+# ADR 0005 — Frozen paired P4 evaluation
+
+Date: 2026-10-10. Status: ACCEPTED for engineering implementation; gold labels and H4 remain pending. Authorization: explicit user APPROVE H3 and instruction to start P4, retaining demo/synthetic labels and separate real-model validation.
+
+A gets request only (raw prompt p4-v1), no evidence/tools. B is the shared frozen Research/Analyst draft. C calls unchanged P2 hard checks plus semantic ModelAdapter; D calls only unchanged hard checks/conflict detection. C has no repair in the primary comparison. C_REPAIR is a separate paired experiment, max one round, same original draft/evidence/metrics. Hash each paired snapshot and retain original and final scores. Do not interpret constructed fixture gains as real model quality or causal research evidence.
+
+The exact-reference scorer uses independent annotation proposals and metric references, never Verifier's own statuses as gold. Unknown paraphrases are unresolved, not fabricated support. Micro numerator/denominator metrics, N/A empty denominators, failures and completeness/false abstention are reported together. Actual time/call counts are measured; missing usage/cost is null. References and their H4 status are explicit.
+
+Thirty engineering cases: ten dev questions share the real fixed Coinbase document; twenty heldout cases use separate new fictitious company/document groups. This is not a thirty-real-question research benchmark. v1 was frozen before runs, then preserved as a preliminary version: review found absent numerical coverage. v2 adds twenty numeric/validation references with independent expectations before any experiment. No label change to improve measured performance. Real-company heldout and genuine provider A/B/C/D remain BLOCKED/NOT VERIFIED; candidate gold needs H4. No P5.
+
+Readonly Evaluation API uses ResearchService → EvaluationRepository. UI consumes executed immutable artifact bundles via API and labels scope, provisional annotations and blocked quality evidence. No calculations or scoring in routes/UI.
+
+P3's old Evaluation test checked the planned placeholder. P4 now implements that feature: only its stub for `/evaluations` and empty-result assertion change. The old checker remains sealed in the P3 audit; append a versioned migration binding old/current source hashes instead of rewriting historical regression records. All existing Research/History and P0–P2 expectations remain unchanged. New regression records append P4 scoring/protocol checks.
+
+Alternatives rejected: silently using semantic outputs as gold; full pipeline differences as a pure semantic ablation; filtering failed cases; treating synthetic heldout as real-company generalization; placeholder scores in UI. Verification: exact scoring/error cases, freeze/hash/split tests, controlled divergent semantic fixture, shared-snapshot equality, bounded repair and failure records, immutable repository, API/UI reads, two reruns, all activated regressions/offline suite, prior audit seals and diff/lint checks.

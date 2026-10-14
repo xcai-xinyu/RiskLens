@@ -1,0 +1,16 @@
+{
+  "version": "checker-migrations-p4-v1",
+  "reason": "P4 replaces P3 Evaluation placeholder with actual artifact viewer. Only legacy UI stub and empty-state assertion changed; historical checker preserved, all Research/History assertions unchanged.",
+  "migrations": [
+    {
+      "case_ids": [
+        "R14-P3",
+        "R15-P3"
+      ],
+      "source": "tests/test_p3.py",
+      "old_sha256": "55cc1044cd245c52198dd33c0d0da0afdc10d725ff9de45cbbbe39d18448b83b",
+      "new_sha256": "ecfdc8faf5d2b1f228035fa00862a077d93c98176a90b213691f0a839133b9dc",
+      "historical_source": "evaluation/audit/P3/attempt-001/artifacts/source/tests/test_p3.py"
+    }
+  ]
+}

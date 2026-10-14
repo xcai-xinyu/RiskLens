@@ -1,0 +1,152 @@
+{
+  "dev-00": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-01": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-02": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-03": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-04": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-05": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-06": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-07": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-08": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "dev-09": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-00": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-01": {
+    "status": "partially_supported",
+    "overstatement": true,
+    "narrowed": "Cash is 21 million USD FY:2024."
+  },
+  "heldout-02": {
+    "status": "contradicted",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-03": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-04": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-05": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-06": {
+    "status": "partially_supported",
+    "overstatement": true,
+    "narrowed": "Cash is 26 million USD FY:2024."
+  },
+  "heldout-07": {
+    "status": "contradicted",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-08": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-09": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-10": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-11": {
+    "status": "partially_supported",
+    "overstatement": true,
+    "narrowed": "Cash is 31 million USD FY:2024."
+  },
+  "heldout-12": {
+    "status": "contradicted",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-13": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-14": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-15": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-16": {
+    "status": "partially_supported",
+    "overstatement": true,
+    "narrowed": "Cash is 36 million USD FY:2024."
+  },
+  "heldout-17": {
+    "status": "contradicted",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-18": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  },
+  "heldout-19": {
+    "status": "supported",
+    "overstatement": false,
+    "narrowed": null
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "mode": "demo",
+  "simulated_model_decisions": true,
+  "provider_calls": 0,
+  "api_submission": 202,
+  "run_status": "partial",
+  "run_id": "abd62e73-e8d6-49ae-b15a-f21320b78fa2",
+  "report_status": "partial",
+  "claims": 5,
+  "metric_statuses": [
+    "missing_input",
+    "missing_input",
+    "missing_input",
+    "missing_input",
+    "missing_input"
+  ],
+  "report_sha256_preserved_after_process_restart": "1cbe2e5b9cc4cc737594c15f95c3b1d1c34f5222bf1e3ae115de036fc5b69575",
+  "history_directly_comparable": false,
+  "ui_method": "Streamlit AppTest against actual HTTP API + server health; no screenshot/browser visual approval",
+  "citation_expanders": [
+    "Citation \u00b7 ev-edde568b61789e3b438635e5",
+    "Citation \u00b7 ev-edde568b61789e3b438635e5",
+    "Citation \u00b7 ev-f98ed234ccd7ae7e4ab4e339",
+    "Citation \u00b7 ev-540ca2f380364fe9952d584b",
+    "Citation \u00b7 ev-540ca2f380364fe9952d584b"
+  ],
+  "calculation_expanders": [
+    "Calculation \u00b7 current_ratio \u00b7 2",
+    "Calculation \u00b7 cash_ratio \u00b7 0.2",
+    "Calculation \u00b7 debt_to_equity \u00b7 2",
+    "Calculation \u00b7 interest_coverage \u00b7 3",
+    "Calculation \u00b7 operating_cash_flow_change \u00b7 0.5"
+  ],
+  "ui_warnings": [
+    "Not directly comparable: coverage or execution versions differ or remain incomplete."
+  ],
+  "streamlit_health": 200,
+  "commands": [
+    {
+      "label": "cli-json",
+      "command": [
+        "python",
+        "main.py",
+        "--stage",
+        "p2",
+        "--mode",
+        "demo",
+        "--company",
+        "Coinbase",
+        "--question",
+        "Assess liquidity and regulatory risks with evidence.",
+        "--as-of-date",
+        "2025-02-13",
+        "--risk-categories",
+        "liquidity",
+        "regulatory",
+        "--format",
+        "json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 68.0207093039935
+    },
+    {
+      "label": "cli-markdown",
+      "command": [
+        "python",
+        "main.py",
+        "--stage",
+        "p2",
+        "--mode",
+        "demo",
+        "--company",
+        "Coinbase",
+        "--question",
+        "Assess liquidity and regulatory risks with evidence.",
+        "--as-of-date",
+        "2025-02-13",
+        "--risk-categories",
+        "liquidity",
+        "regulatory",
+        "--format",
+        "markdown"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 70.67196741299995
+    },
+    {
+      "label": "synthetic-history",
+      "command": [
+        "python",
+        "evaluation/p3_review_seed.py",
+        "--database",
+        "data/private/risklens.sqlite"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.1820024179905886
+    }
+  ]
+}

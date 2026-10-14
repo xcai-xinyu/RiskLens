@@ -1,0 +1,32 @@
+[
+  {
+    "public_file": "demo-report.json",
+    "original_sha256": "ebee629a47c8e8f758a51a5f746a2c0ab0be0b28e973455752e5b91a9949354b",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  },
+  {
+    "public_file": "demo-report.md",
+    "original_sha256": "7adc1c4198b5854fe14d539907da7765d83590fd8ddb813964bebb1ec82c6bb5",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  },
+  {
+    "public_file": "api-demo-report.json",
+    "original_sha256": "8a515663cecda146b961c41a320285bb37309a16e6f660412fe114a9d915cad9",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  },
+  {
+    "public_file": "synthetic-calculation-report.json",
+    "original_sha256": "d2f7049aeeef5bcdc46b2b8768d6a48d81817e3873a167cde82aaaef79140c62",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  },
+  {
+    "public_file": "history-comparison.json",
+    "original_sha256": "0edbf9de98f87a723dbeace12bff654b5765f2852d7ec9cce3c22d8acc1213c1",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  },
+  {
+    "public_file": "runtime-summary.json",
+    "original_sha256": "41e4f5d728d8690bce8523ddd16d3d0fd6576a5308dd97330b650ddfdf872572",
+    "transform": "only temporary/workspace/home path normalization; no claim/value/status edits"
+  }
+]

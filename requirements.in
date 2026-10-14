@@ -1,0 +1,13 @@
+pydantic>=2,<3
+langgraph>=1,<2
+langchain-openai>=1,<2
+pytest>=8,<10
+ruff>=0.14,<1
+chromadb>=1,<2
+pypdf>=6,<7
+pydantic-settings>=2,<3
+fastapi>=0.115,<1
+streamlit>=1.45,<2
+httpx>=0.28,<1
+uvicorn>=0.54,<1
+python-dotenv>=1.2,<2

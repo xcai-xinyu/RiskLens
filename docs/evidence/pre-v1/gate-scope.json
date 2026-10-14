@@ -1,0 +1,60 @@
+{
+  "historical_approvals": [
+    {
+      "stage": "P0",
+      "gate_id": "H0",
+      "decision": "APPROVE",
+      "approval_scope": null,
+      "recorded_at": "2026-10-06T21:42:27.591968+08:00",
+      "technical_status": "PASS",
+      "gate_status": "APPROVED",
+      "conditional_blocked_checks": [
+        "Conditional provider smoke: process-injected configuration unavailable"
+      ],
+      "source_sha256": "9254a789ec935808ee833e9ed037bfeeeeb284b575afe2e5e53da42da1be9693"
+    },
+    {
+      "stage": "P1",
+      "gate_id": "H1",
+      "decision": "APPROVE",
+      "approval_scope": "Explicit H1 gate approval; individual claim verdicts were not supplied",
+      "recorded_at": "2026-10-08T16:04:25.634504+08:00",
+      "technical_status": "PASS",
+      "gate_status": "APPROVED",
+      "conditional_blocked_checks": [
+        "OPENAI_API_KEY, LLM_MODEL, EMBEDDING_MODEL missing for real P1",
+        "TAVILY_API_KEY additionally missing for live",
+        "Real-model semantic injection resistance not exercised"
+      ],
+      "source_sha256": "6853c494a247f480db5d7897c5a16b1491dfc655de9bb69d701c5d4de041fe16"
+    },
+    {
+      "stage": "P2",
+      "gate_id": "H2",
+      "decision": "APPROVE",
+      "approval_scope": "Reviewed P2 offline/deterministic implementation only; no live-provider validation claim",
+      "recorded_at": "2026-10-08T17:38:33.552375+08:00",
+      "technical_status": "PASS",
+      "gate_status": "APPROVED",
+      "conditional_blocked_checks": [
+        "Real semantic provider: OPENAI_API_KEY and LLM_MODEL missing"
+      ],
+      "source_sha256": "329bd161558a116529da48749f565fdf71937314a6194ae61c66ef949f117769"
+    },
+    {
+      "stage": "P3",
+      "gate_id": "H3",
+      "decision": "APPROVE",
+      "approval_scope": "P3 browser/product and offline/deterministic scope; no live-provider validation claim",
+      "recorded_at": "2026-10-10T17:09:40.835520+08:00",
+      "technical_status": "PASS",
+      "gate_status": "APPROVED",
+      "conditional_blocked_checks": null,
+      "source_sha256": "02fccf18de40e8af9c4710b6325b7ed8b310f17fad01dfdeee1e92ab156661c7"
+    }
+  ],
+  "current_stage": "P4",
+  "H4": "NOT_APPROVED",
+  "H5": "NOT_APPROVED",
+  "publication_is_not_stage_approval": true
+}

@@ -1,0 +1,5 @@
+Looking in links: /tmp/tmp4vjxswyd
+Processing /tmp/tmp4vjxswyd/setuptools-79.0.1-py3-none-any.whl
+Processing /tmp/tmp4vjxswyd/pip-24.0-py3-none-any.whl
+Installing collected packages: setuptools, pip
+Successfully installed pip-24.0 setuptools-79.0.1

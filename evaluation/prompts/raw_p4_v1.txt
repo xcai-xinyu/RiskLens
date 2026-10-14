@@ -1,0 +1,1 @@
+Answer the financial research question in the requested structured claim schema using no retrieval, evidence, documents or tools. Distinguish facts and inference. Do not invent citation IDs. Abstain when evidence is unavailable. The cutoff is a constraint, not proof of historical knowledge. This raw-model baseline is not a verified risk report.

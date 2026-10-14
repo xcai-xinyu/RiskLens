@@ -1,0 +1,401 @@
+{
+  "left": {
+    "run_id": "h3-synthetic-a",
+    "company": "Coinbase",
+    "as_of_date": "2025-02-13",
+    "status": "partial",
+    "overall_risk": "UNKNOWN",
+    "mode": "demo",
+    "simulated": true,
+    "corpus_version": "p2-synthetic-v1",
+    "corpus_hash": "751d1d3b9e4d0406ea80cd8c27050498fefabc068150c796e2b68aa048aefb10",
+    "corpus_manifest_hash": "4119e6f685649062aec35a9864901c32deb6e4c2f7c5b33f33f2f144ae7cb214",
+    "sources": [
+      {
+        "document_id": "doc-c5bc2e5f046ad5ace2a9d6c3",
+        "title": "SYNTHETIC P2 review source 0",
+        "published_at": "2025-01-01",
+        "content_hash": "5e85b7d969a7714bf59d39aee9e4f69b1d8d701da80349c4202b5c62114f39b1"
+      }
+    ],
+    "model": "synthetic-p2-adversarial-v2",
+    "provider": "fixture",
+    "prompt_version": "p2-v1",
+    "prompt_hashes": {
+      "analyst_p1_v1.txt": "8b55164c186ff1eb29e2e9cab965f3b168d521f37b2358b0e3ad6075bf42234e",
+      "planner_p1_v1.txt": "2b8df6c39cbaabb6190797fe59246f40b15c9693fd748ded24de2ed0fa6a3ff3",
+      "research_p1_v1.txt": "1325360667363647eeb55856f9e1d629685393faf116cb7188b74944f9b47132"
+    },
+    "rubric_version": "verification-p2-v1",
+    "formula_version": "decimal-v1",
+    "verification_version": "p2-conflicts-v2",
+    "p2_content_hashes": {
+      "app/configuration/verification_p2_v1.json": "baa608675ff2ca31c308be3001589d8a981398753c559ac4936ef274efe848b4",
+      "app/prompts/analyst_p2_v1.txt": "6d169ddec5fd6b73d4b2f5fc77be3fca54d49e88eb510d3ae03fa76b4f120553",
+      "app/prompts/extract_p2_v1.txt": "7e3327a30070a45367f2d06d21204238c1e9d916d701ff298d2e6902e9e542fe",
+      "app/prompts/repair_p2_v1.txt": "cf1d04b3667cc221db5f4503cc6906698eb3cd912fd1df78d9e860d65f6dac5b",
+      "app/prompts/verifier_p2_v1.txt": "471f3291819b6ab4ab3419308633fd7d9e4331b72baec8dbadfc214186ae1a88",
+      "app/tools/metrics.py": "f3154d86d7a7e588b97668d165b25b12af7e34d213c3e53de1d5c7463e544f30",
+      "tests/fixtures/p2_semantic_v1.json": "44003b53995661b8b73515684061a29170719904ae35c9c6a90a8d8de014e2f6",
+      "tests/fixtures/regression/p2_adversarial_v1.json": "a984b81445c61d8273e06a060be79a7448ca3ac3edb5806b3d9d88c23765a82b",
+      "tests/fixtures/regression/p2_adversarial_v2.json": "29469392c082addffb7318a7e978a526181cbad8f4cb2fdeb65beea18bf0d709"
+    }
+  },
+  "right": {
+    "run_id": "h3-synthetic-b",
+    "company": "Coinbase",
+    "as_of_date": "2025-03-01",
+    "status": "partial",
+    "overall_risk": "UNKNOWN",
+    "mode": "demo",
+    "simulated": true,
+    "corpus_version": "h3-synthetic-reduced-v1",
+    "corpus_hash": "h3-reduced-coverage-fixture",
+    "corpus_manifest_hash": "4119e6f685649062aec35a9864901c32deb6e4c2f7c5b33f33f2f144ae7cb214",
+    "sources": [],
+    "model": "h3-other-fixture-model",
+    "provider": "fixture",
+    "prompt_version": "p2-v1",
+    "prompt_hashes": {
+      "analyst_p1_v1.txt": "8b55164c186ff1eb29e2e9cab965f3b168d521f37b2358b0e3ad6075bf42234e",
+      "planner_p1_v1.txt": "2b8df6c39cbaabb6190797fe59246f40b15c9693fd748ded24de2ed0fa6a3ff3",
+      "research_p1_v1.txt": "1325360667363647eeb55856f9e1d629685393faf116cb7188b74944f9b47132"
+    },
+    "rubric_version": "verification-p2-v1",
+    "formula_version": "decimal-v1",
+    "verification_version": "p2-conflicts-v2",
+    "p2_content_hashes": {
+      "app/configuration/verification_p2_v1.json": "baa608675ff2ca31c308be3001589d8a981398753c559ac4936ef274efe848b4",
+      "app/prompts/analyst_p2_v1.txt": "6d169ddec5fd6b73d4b2f5fc77be3fca54d49e88eb510d3ae03fa76b4f120553",
+      "app/prompts/extract_p2_v1.txt": "7e3327a30070a45367f2d06d21204238c1e9d916d701ff298d2e6902e9e542fe",
+      "app/prompts/repair_p2_v1.txt": "cf1d04b3667cc221db5f4503cc6906698eb3cd912fd1df78d9e860d65f6dac5b",
+      "app/prompts/verifier_p2_v1.txt": "471f3291819b6ab4ab3419308633fd7d9e4331b72baec8dbadfc214186ae1a88",
+      "app/tools/metrics.py": "f3154d86d7a7e588b97668d165b25b12af7e34d213c3e53de1d5c7463e544f30",
+      "tests/fixtures/p2_semantic_v1.json": "44003b53995661b8b73515684061a29170719904ae35c9c6a90a8d8de014e2f6",
+      "tests/fixtures/regression/p2_adversarial_v1.json": "a984b81445c61d8273e06a060be79a7448ca3ac3edb5806b3d9d88c23765a82b",
+      "tests/fixtures/regression/p2_adversarial_v2.json": "29469392c082addffb7318a7e978a526181cbad8f4cb2fdeb65beea18bf0d709"
+    }
+  },
+  "directly_comparable": false,
+  "reasons": [
+    "corpus_version_differs",
+    "corpus_hash_differs",
+    "sources_differs",
+    "model_differs",
+    "incomplete_research_coverage"
+  ],
+  "notice": "Not directly comparable: coverage or execution versions differ or remain incomplete.",
+  "risk_change_conclusion": null,
+  "observed_risk_factors": {
+    "left": [
+      {
+        "category": "liquidity",
+        "level": "UNKNOWN",
+        "verified_claim_ids": [
+          "c5"
+        ],
+        "rationale": "Verified observations retained; insufficient reviewed signals to assign a risk level.",
+        "missing_data": [
+          "Category risk evidence/rubric coverage"
+        ]
+      }
+    ],
+    "right": [
+      {
+        "category": "liquidity",
+        "level": "UNKNOWN",
+        "verified_claim_ids": [],
+        "rationale": "Verified observations retained; insufficient reviewed signals to assign a risk level.",
+        "missing_data": [
+          "Category risk evidence/rubric coverage"
+        ]
+      }
+    ]
+  },
+  "observed_metrics": {
+    "left": [
+      {
+        "metric_id": "metric-4c4e028b97c71785e914cc2d",
+        "name": "current_ratio",
+        "value": "2",
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "name": "current_assets",
+            "value": "200",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "current_liabilities",
+            "value": "100",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-bc566a1dd0984020da21a1a8",
+        "name": "cash_ratio",
+        "value": "0.2",
+        "formula": "cash_and_cash_equivalents / current_liabilities",
+        "inputs": [
+          {
+            "name": "cash_and_cash_equivalents",
+            "value": "20",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "current_liabilities",
+            "value": "100",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-680ccc17de3dcc55a8e9a9d9",
+        "name": "debt_to_equity",
+        "value": "2",
+        "formula": "total_debt / total_equity",
+        "inputs": [
+          {
+            "name": "total_debt",
+            "value": "80",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "total_equity",
+            "value": "40",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-cc9253f2431126265d4f4aa7",
+        "name": "interest_coverage",
+        "value": "3",
+        "formula": "EBIT / interest_expense",
+        "inputs": [
+          {
+            "name": "EBIT",
+            "value": "30",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "interest_expense",
+            "value": "10",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-d5899af1c3e9e54a998be3b8",
+        "name": "operating_cash_flow_change",
+        "value": "0.5",
+        "formula": "(OCF_current - OCF_previous) / abs(OCF_previous)",
+        "inputs": [
+          {
+            "name": "OCF_current",
+            "value": "60",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "OCF_previous",
+            "value": "40",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2023",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      }
+    ],
+    "right": [
+      {
+        "metric_id": "metric-4c4e028b97c71785e914cc2d",
+        "name": "current_ratio",
+        "value": "2",
+        "formula": "current_assets / current_liabilities",
+        "inputs": [
+          {
+            "name": "current_assets",
+            "value": "200",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "current_liabilities",
+            "value": "100",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-bc566a1dd0984020da21a1a8",
+        "name": "cash_ratio",
+        "value": "0.2",
+        "formula": "cash_and_cash_equivalents / current_liabilities",
+        "inputs": [
+          {
+            "name": "cash_and_cash_equivalents",
+            "value": "20",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "current_liabilities",
+            "value": "100",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-680ccc17de3dcc55a8e9a9d9",
+        "name": "debt_to_equity",
+        "value": "2",
+        "formula": "total_debt / total_equity",
+        "inputs": [
+          {
+            "name": "total_debt",
+            "value": "80",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "total_equity",
+            "value": "40",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-cc9253f2431126265d4f4aa7",
+        "name": "interest_coverage",
+        "value": "3",
+        "formula": "EBIT / interest_expense",
+        "inputs": [
+          {
+            "name": "EBIT",
+            "value": "30",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "interest_expense",
+            "value": "10",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      },
+      {
+        "metric_id": "metric-d5899af1c3e9e54a998be3b8",
+        "name": "operating_cash_flow_change",
+        "value": "0.5",
+        "formula": "(OCF_current - OCF_previous) / abs(OCF_previous)",
+        "inputs": [
+          {
+            "name": "OCF_current",
+            "value": "60",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2024",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          },
+          {
+            "name": "OCF_previous",
+            "value": "40",
+            "unit": "million",
+            "currency": "USD",
+            "period": "FY:2023",
+            "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+            "extraction_status": "extracted"
+          }
+        ],
+        "status": "success",
+        "limitations": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": "p4-heldout-synthetic-v1",
+  "company_aliases": {
+    "birch fixture": "BIRCH_SYNTHETIC"
+  },
+  "documents": [
+    {
+      "path": "heldout-18.txt",
+      "company_id": "BIRCH_SYNTHETIC",
+      "title": "SYNTHETIC Birch Fixture disclosure 18",
+      "url": "https://example.com/p4-fixture/18",
+      "published_at": "2025-01-01",
+      "source_group_id": "BIRCH_SYNTHETIC",
+      "sha256": "39bdf13a7e769479d35a27af8ce2ad19491d44e983e681b2db6c253235d4ae72"
+    }
+  ],
+  "historical_limitation": "Entire source is synthetic engineering data."
+}

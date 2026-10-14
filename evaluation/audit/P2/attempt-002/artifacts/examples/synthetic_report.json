@@ -1,0 +1,563 @@
+{
+  "as_of_date": "2025-02-13",
+  "claims": [
+    {
+      "claim_id": "c5",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "ev-021ea0d08d500b2cf3e81b01"
+      ],
+      "metric_ids": [],
+      "risk_category": "liquidity",
+      "text": "Current assets are 200 million USD FY:2024."
+    }
+  ],
+  "company": "Coinbase",
+  "gaps": [
+    {
+      "code": "claim_unverifiable",
+      "message": "c1: Amount is in source, but it does not establish guaranteed liquidity safety. Overstatement must be narrowed and reverified. Unresolved conflicts require abstention. Conflicts: cash conflict USD FY2024: ev-021ea0d08d500b2cf3e81b01 (doc-c5bc2e5f046ad5ace2a9d6c3, page=None, section=Text body) \"Cash is 20 million USD FY:2024\" [20000000 units] vs ev-c7ac10b072a44d30aca8359e (doc-de8d7f360323deae08037ade, page=None, section=Text body) \"Cash is 10 million USD FY:2024\" [10000000 units]"
+    },
+    {
+      "code": "claim_unsupported",
+      "message": "c2: Source EBIT/interest expense is 30/10=3, not 99; this claim cites no calculation."
+    },
+    {
+      "code": "claim_contradicted",
+      "message": "c3: The cited source states cash_and_cash_equivalents 20 million, not 200. Conflicts: Claim amount 200 conflicts with source amount 20 in the same period and unit."
+    },
+    {
+      "code": "claim_unverifiable",
+      "message": "c4: The source does not establish future insolvency."
+    },
+    {
+      "code": "risk_level_unknown",
+      "message": "Insufficient reviewed category risk signals."
+    }
+  ],
+  "metadata": {
+    "actual_usage": null,
+    "chunk_version": "p1-token800-overlap120-v1",
+    "citations": {
+      "ev-021ea0d08d500b2cf3e81b01": {
+        "chunk_id": "chunk-021ea0d08d500b2cf3e81b01",
+        "document_id": "doc-c5bc2e5f046ad5ace2a9d6c3",
+        "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+        "number": 1,
+        "page": null,
+        "quote": "current_assets 200 million USD FY:2024; current_liabilities 100 million USD FY:2024; cash_and_cash_equivalents 20 million USD FY:2024; total_debt 80 million USD FY:2024; total_equity 40 million USD FY:2024; EBIT 30 million USD FY:2024; interest_expense 10 million USD FY:2024; OCF_current 60 million USD FY:2024; OCF_previous 40 million USD FY:2023. Cash is 20 million USD FY:2024.",
+        "relevance": 0.8888888888888888,
+        "section": "Text body",
+        "source_group_id": "synthetic-0"
+      }
+    },
+    "claim_coverage": {
+      "original": 5,
+      "supported_final": 1
+    },
+    "claim_lineage": [
+      {
+        "claim": {
+          "claim_id": "c1",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-021ea0d08d500b2cf3e81b01"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Cash is 20 million USD FY:2024, so liquidity is guaranteed safe."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": false,
+            "no_overstatement": false,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": false,
+            "unit_period_currency": true
+          },
+          "claim_id": "c1",
+          "conflicts": [
+            "cash conflict USD FY2024: ev-021ea0d08d500b2cf3e81b01 (doc-c5bc2e5f046ad5ace2a9d6c3, page=None, section=Text body) \"Cash is 20 million USD FY:2024\" [20000000 units] vs ev-c7ac10b072a44d30aca8359e (doc-de8d7f360323deae08037ade, page=None, section=Text body) \"Cash is 10 million USD FY:2024\" [10000000 units]"
+          ],
+          "evidence_support_score": null,
+          "explanation": "Amount is in source, but it does not establish guaranteed liquidity safety. Overstatement must be narrowed and reverified. Unresolved conflicts require abstention. Conflicts: cash conflict USD FY2024: ev-021ea0d08d500b2cf3e81b01 (doc-c5bc2e5f046ad5ace2a9d6c3, page=None, section=Text body) \"Cash is 20 million USD FY:2024\" [20000000 units] vs ev-c7ac10b072a44d30aca8359e (doc-de8d7f360323deae08037ade, page=None, section=Text body) \"Cash is 10 million USD FY:2024\" [10000000 units]",
+          "status": "unverifiable"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "c2",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-021ea0d08d500b2cf3e81b01"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Interest coverage is 99."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": false,
+            "unit_period_currency": true
+          },
+          "claim_id": "c2",
+          "conflicts": [],
+          "evidence_support_score": null,
+          "explanation": "Source EBIT/interest expense is 30/10=3, not 99; this claim cites no calculation.",
+          "status": "unsupported"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "c3",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-021ea0d08d500b2cf3e81b01"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Cash and cash equivalents are 200 million USD FY:2024."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": false,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": false,
+            "unit_period_currency": true
+          },
+          "claim_id": "c3",
+          "conflicts": [
+            "Claim amount 200 conflicts with source amount 20 in the same period and unit."
+          ],
+          "evidence_support_score": null,
+          "explanation": "The cited source states cash_and_cash_equivalents 20 million, not 200. Conflicts: Claim amount 200 conflicts with source amount 20 in the same period and unit.",
+          "status": "contradicted"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "c4",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-021ea0d08d500b2cf3e81b01"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "The company will be insolvent next year."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": false,
+            "unit_period_currency": true
+          },
+          "claim_id": "c4",
+          "conflicts": [],
+          "evidence_support_score": null,
+          "explanation": "The source does not establish future insolvency.",
+          "status": "unverifiable"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "c5",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-021ea0d08d500b2cf3e81b01"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Current assets are 200 million USD FY:2024."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "c5",
+          "conflicts": [],
+          "evidence_support_score": 65.0,
+          "explanation": "Exact input appears in the synthetic source.",
+          "status": "supported"
+        }
+      }
+    ],
+    "config": {
+      "max_llm_calls": 10,
+      "max_repair_rounds": 1,
+      "max_tool_calls": 12,
+      "retrieval_limit": 12,
+      "run_timeout_seconds": 180
+    },
+    "config_hash": "4302759928152e51edc80486b0c41184fd47a76cea9133bc53d1d2c518ef6f5f",
+    "corpus_hash": "751d1d3b9e4d0406ea80cd8c27050498fefabc068150c796e2b68aa048aefb10",
+    "corpus_manifest_hash": "4119e6f685649062aec35a9864901c32deb6e4c2f7c5b33f33f2f144ae7cb214",
+    "corpus_version": "p2-synthetic-v1",
+    "cost": null,
+    "dirty": null,
+    "embedding_calls": null,
+    "embedding_dimensions": 256,
+    "embedding_model": "demo-hash256-v1",
+    "finished_at": "2026-10-08T09:29:44.862057+00:00",
+    "formula_version": "decimal-v1",
+    "git_commit": null,
+    "historical_limitation": "Entire corpus is synthetic engineering test data, not Coinbase disclosure.",
+    "index_version": "p1-chroma-v1",
+    "label": "SIMULATED MODEL RESPONSES / SYNTHETIC FIXTURE DOCUMENTS",
+    "mode": "demo",
+    "model": "synthetic-p2-adversarial-v2",
+    "model_calls": 6,
+    "model_fixture_hash": "6e7f3df9cf561344eb6cb084f855416fc080f00040972d73e4830a0c5829978d",
+    "p2_content_hashes": {
+      "app/configuration/verification_p2_v1.json": "baa608675ff2ca31c308be3001589d8a981398753c559ac4936ef274efe848b4",
+      "app/prompts/analyst_p2_v1.txt": "6d169ddec5fd6b73d4b2f5fc77be3fca54d49e88eb510d3ae03fa76b4f120553",
+      "app/prompts/extract_p2_v1.txt": "7e3327a30070a45367f2d06d21204238c1e9d916d701ff298d2e6902e9e542fe",
+      "app/prompts/repair_p2_v1.txt": "cf1d04b3667cc221db5f4503cc6906698eb3cd912fd1df78d9e860d65f6dac5b",
+      "app/prompts/verifier_p2_v1.txt": "471f3291819b6ab4ab3419308633fd7d9e4331b72baec8dbadfc214186ae1a88",
+      "app/tools/metrics.py": "f3154d86d7a7e588b97668d165b25b12af7e34d213c3e53de1d5c7463e544f30",
+      "tests/fixtures/p2_semantic_v1.json": "44003b53995661b8b73515684061a29170719904ae35c9c6a90a8d8de014e2f6",
+      "tests/fixtures/regression/p2_adversarial_v1.json": "a984b81445c61d8273e06a060be79a7448ca3ac3edb5806b3d9d88c23765a82b",
+      "tests/fixtures/regression/p2_adversarial_v2.json": "29469392c082addffb7318a7e978a526181cbad8f4cb2fdeb65beea18bf0d709"
+    },
+    "parser_version": "p1-parser-v1",
+    "prompt_hashes": {
+      "analyst_p1_v1.txt": "8b55164c186ff1eb29e2e9cab965f3b168d521f37b2358b0e3ad6075bf42234e",
+      "planner_p1_v1.txt": "2b8df6c39cbaabb6190797fe59246f40b15c9693fd748ded24de2ed0fa6a3ff3",
+      "research_p1_v1.txt": "1325360667363647eeb55856f9e1d629685393faf116cb7188b74944f9b47132"
+    },
+    "prompt_version": "p2-v1",
+    "provider": "fixture",
+    "randomness": null,
+    "repair_count": 0,
+    "retrieval_config": {
+      "limit": 12,
+      "max_candidates": 48,
+      "rerank": "lexical-overlap-v1"
+    },
+    "rubric_version": "verification-p2-v1",
+    "schema_version": "1+p1-v1+p2-v1",
+    "simulated": true,
+    "stage": "P2",
+    "started_at": "2026-10-08T09:29:44.138120+00:00",
+    "tool_calls": 1,
+    "usage_reason": "Simulated or provider usage unavailable; null is not zero.",
+    "verification_implemented": true,
+    "verification_results": [
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": false,
+          "no_overstatement": false,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": false,
+          "unit_period_currency": true
+        },
+        "claim_id": "c1",
+        "conflicts": [
+          "cash conflict USD FY2024: ev-021ea0d08d500b2cf3e81b01 (doc-c5bc2e5f046ad5ace2a9d6c3, page=None, section=Text body) \"Cash is 20 million USD FY:2024\" [20000000 units] vs ev-c7ac10b072a44d30aca8359e (doc-de8d7f360323deae08037ade, page=None, section=Text body) \"Cash is 10 million USD FY:2024\" [10000000 units]"
+        ],
+        "evidence_support_score": null,
+        "explanation": "Amount is in source, but it does not establish guaranteed liquidity safety. Overstatement must be narrowed and reverified. Unresolved conflicts require abstention. Conflicts: cash conflict USD FY2024: ev-021ea0d08d500b2cf3e81b01 (doc-c5bc2e5f046ad5ace2a9d6c3, page=None, section=Text body) \"Cash is 20 million USD FY:2024\" [20000000 units] vs ev-c7ac10b072a44d30aca8359e (doc-de8d7f360323deae08037ade, page=None, section=Text body) \"Cash is 10 million USD FY:2024\" [10000000 units]",
+        "status": "unverifiable"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": false,
+          "unit_period_currency": true
+        },
+        "claim_id": "c2",
+        "conflicts": [],
+        "evidence_support_score": null,
+        "explanation": "Source EBIT/interest expense is 30/10=3, not 99; this claim cites no calculation.",
+        "status": "unsupported"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": false,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": false,
+          "unit_period_currency": true
+        },
+        "claim_id": "c3",
+        "conflicts": [
+          "Claim amount 200 conflicts with source amount 20 in the same period and unit."
+        ],
+        "evidence_support_score": null,
+        "explanation": "The cited source states cash_and_cash_equivalents 20 million, not 200. Conflicts: Claim amount 200 conflicts with source amount 20 in the same period and unit.",
+        "status": "contradicted"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": false,
+          "unit_period_currency": true
+        },
+        "claim_id": "c4",
+        "conflicts": [],
+        "evidence_support_score": null,
+        "explanation": "The source does not establish future insolvency.",
+        "status": "unverifiable"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "c5",
+        "conflicts": [],
+        "evidence_support_score": 65.0,
+        "explanation": "Exact input appears in the synthetic source.",
+        "status": "supported"
+      }
+    ],
+    "verification_version": "p2-conflicts-v2"
+  },
+  "metrics": [
+    {
+      "formula": "current_assets / current_liabilities",
+      "inputs": [
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "current_assets",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "200"
+        },
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "current_liabilities",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "100"
+        }
+      ],
+      "limitations": [],
+      "metric_id": "metric-4c4e028b97c71785e914cc2d",
+      "name": "current_ratio",
+      "status": "success",
+      "value": "2"
+    },
+    {
+      "formula": "cash_and_cash_equivalents / current_liabilities",
+      "inputs": [
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "cash_and_cash_equivalents",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "20"
+        },
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "current_liabilities",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "100"
+        }
+      ],
+      "limitations": [],
+      "metric_id": "metric-bc566a1dd0984020da21a1a8",
+      "name": "cash_ratio",
+      "status": "success",
+      "value": "0.2"
+    },
+    {
+      "formula": "total_debt / total_equity",
+      "inputs": [
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "total_debt",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "80"
+        },
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "total_equity",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "40"
+        }
+      ],
+      "limitations": [],
+      "metric_id": "metric-680ccc17de3dcc55a8e9a9d9",
+      "name": "debt_to_equity",
+      "status": "success",
+      "value": "2"
+    },
+    {
+      "formula": "EBIT / interest_expense",
+      "inputs": [
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "EBIT",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "30"
+        },
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "interest_expense",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "10"
+        }
+      ],
+      "limitations": [],
+      "metric_id": "metric-cc9253f2431126265d4f4aa7",
+      "name": "interest_coverage",
+      "status": "success",
+      "value": "3"
+    },
+    {
+      "formula": "(OCF_current - OCF_previous) / abs(OCF_previous)",
+      "inputs": [
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "OCF_current",
+          "period": "FY:2024",
+          "unit": "million",
+          "value": "60"
+        },
+        {
+          "currency": "USD",
+          "evidence_id": "ev-021ea0d08d500b2cf3e81b01",
+          "extraction_status": "extracted",
+          "name": "OCF_previous",
+          "period": "FY:2023",
+          "unit": "million",
+          "value": "40"
+        }
+      ],
+      "limitations": [],
+      "metric_id": "metric-d5899af1c3e9e54a998be3b8",
+      "name": "operating_cash_flow_change",
+      "status": "success",
+      "value": "0.5"
+    }
+  ],
+  "overall_risk": "UNKNOWN",
+  "risk_factors": [
+    {
+      "category": "liquidity",
+      "level": "UNKNOWN",
+      "missing_data": [
+        "Category risk evidence/rubric coverage"
+      ],
+      "rationale": "Verified observations retained; insufficient reviewed signals to assign a risk level.",
+      "verified_claim_ids": [
+        "c5"
+      ]
+    }
+  ],
+  "run_id": "136c5ca7-9e8c-42c0-a4ff-e3c971525c83",
+  "sources": [
+    {
+      "content_hash": "5e85b7d969a7714bf59d39aee9e4f69b1d8d701da80349c4202b5c62114f39b1",
+      "document_id": "doc-c5bc2e5f046ad5ace2a9d6c3",
+      "local_path": "/tmp/risklens-p2-examples-gzsygys9/store/5e85b7d969a7714bf59d39aee9e4f69b1d8d701da80349c4202b5c62114f39b1.txt",
+      "published_at": "2025-01-01",
+      "retrieved_at": "2026-10-08T09:29:44.225968Z",
+      "source_type": "text",
+      "title": "SYNTHETIC P2 review source 0",
+      "url": "https://example.com/p2-synthetic-0"
+    }
+  ],
+  "status": "partial",
+  "summary": "Current assets are 200 million USD FY:2024."
+}

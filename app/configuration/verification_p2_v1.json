@@ -1,0 +1,7 @@
+{
+  "version": "verification-p2-v1",
+  "weights": {"entailment": 0.5, "source_quality": 0.3, "independent_corroboration": 0.2},
+  "source_quality": {"official_pdf": 1.0, "pdf": 0.8, "text": 0.5, "html": 0.5},
+  "risk_policy": "UNKNOWN until category rubric has sufficient reviewed risk signals; absence of evidence is not LOW",
+  "corroboration_policy": "Distinct source groups alone do not prove corroboration; P2 conservatively assigns zero"
+}

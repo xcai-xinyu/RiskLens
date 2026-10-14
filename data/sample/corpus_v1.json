@@ -1,0 +1,24 @@
+{
+  "version": "coinbase-q424-v1",
+  "company_aliases": {
+    "coinbase": "COIN",
+    "coin": "COIN",
+    "coinbase global": "COIN"
+  },
+  "documents": [
+    {
+      "path": "coinbase-q424.pdf",
+      "company_id": "COIN",
+      "title": "Coinbase Q4 and Full Year 2024 Shareholder Letter",
+      "url": "https://s27.q4cdn.com/397450999/files/doc_financials/2024/q4/Q4-24-Shareholder-Letter.pdf",
+      "published_at": "2025-02-13",
+      "source_group_id": "coinbase-q424-original",
+      "sha256": "2f3824cd25f11c50944a4844716ab3208bfbc38bbc4dc6024b37ec3be4ac328b"
+    }
+  ],
+  "date_evidence": {
+    "source": "PDF cover and Coinbase investor release",
+    "url": "https://investor.coinbase.com/news/news-details/2025/Coinbase-Releases-Fourth-Quarter-and-Full-Year-2024-Shareholder-Letter/default.aspx"
+  },
+  "historical_limitation": "Frozen at retrieval in October 2026; original dated PDF, not independently archived on publication day."
+}

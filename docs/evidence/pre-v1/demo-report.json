@@ -1,0 +1,553 @@
+{
+  "as_of_date": "2025-02-13",
+  "claims": [
+    {
+      "claim_id": "draft-liquidity-1",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "ev-edde568b61789e3b438635e5"
+      ],
+      "metric_ids": [],
+      "risk_category": "liquidity",
+      "text": "Coinbase reported $9.3 billion in $USD resources at the end of Q4 2024; this company-defined measure includes cash and cash equivalents and net USDC."
+    },
+    {
+      "claim_id": "draft-liquidity-2",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "ev-edde568b61789e3b438635e5"
+      ],
+      "metric_ids": [],
+      "risk_category": "liquidity",
+      "text": "Coinbase stated that its $USD resources increased $1.1 billion quarter over quarter in Q4 2024."
+    },
+    {
+      "claim_id": "draft-liquidity-3",
+      "claim_type": "inference",
+      "evidence_ids": [
+        "ev-f98ed234ccd7ae7e4ab4e339"
+      ],
+      "metric_ids": [],
+      "risk_category": "liquidity",
+      "text": "The disclosed $USD resources measure should not be treated as cash alone because it also includes net USDC; these disclosures alone do not establish a final liquidity risk level."
+    },
+    {
+      "claim_id": "draft-regulatory-1",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "ev-540ca2f380364fe9952d584b"
+      ],
+      "metric_ids": [],
+      "risk_category": "regulatory",
+      "text": "Coinbase reported that a district court granted its request for interlocutory appeal in January 2025 in its ongoing SEC litigation."
+    },
+    {
+      "claim_id": "draft-regulatory-2",
+      "claim_type": "fact",
+      "evidence_ids": [
+        "ev-540ca2f380364fe9952d584b"
+      ],
+      "metric_ids": [],
+      "risk_category": "regulatory",
+      "text": "Coinbase stated that discovery was paused pending the outcome of the interlocutory appeal process; this is a company disclosure, not an independent legal finding."
+    }
+  ],
+  "company": "Coinbase",
+  "gaps": [
+    {
+      "code": "missing_input",
+      "message": "current_ratio: missing_input"
+    },
+    {
+      "code": "missing_input",
+      "message": "cash_ratio: missing_input"
+    },
+    {
+      "code": "missing_input",
+      "message": "debt_to_equity: missing_input"
+    },
+    {
+      "code": "missing_input",
+      "message": "interest_coverage: missing_input"
+    },
+    {
+      "code": "missing_input",
+      "message": "operating_cash_flow_change: missing_input"
+    },
+    {
+      "code": "risk_level_unknown",
+      "message": "Insufficient reviewed category risk signals."
+    }
+  ],
+  "metadata": {
+    "actual_usage": null,
+    "adapter_llm_calls": null,
+    "chunk_version": "p1-token800-overlap120-v1",
+    "citations": {
+      "ev-540ca2f380364fe9952d584b": {
+        "chunk_id": "chunk-540ca2f380364fe9952d584b",
+        "document_id": "doc-4f281bb6327a57b67a6a0462",
+        "evidence_id": "ev-540ca2f380364fe9952d584b",
+        "number": 1,
+        "page": 3,
+        "quote": "Chapter 1: 2024 was a strong year for crypto and for Coinbase - our revenue more than doubled to $6.6 billion, net income was $2.6 billion, and we generated $3.3 billion of Adjusted EBITDA. Q4 total revenue was $2.3 billion, up 88% Q/Q. Transaction revenue was $1.6 billion, up 172% Q/Q. Subscription and services revenue grew 15% Q/Q to $641 million, driven by higher crypto asset prices, average native unit inflows across staking, custody, and USDC assets in our product suite, as well as continued growth of Coinbase One subscribers. Total operating expenses were $1.2 billion, up 19% Q/Q, while technology & development, general & administrative, and sales & marketing expenses were collectively $957 million, up 10% Q/Q. Net income was $1.3 billion and included $476 million in pre-tax gains on our crypto asset investment portfolio—the vast majority of which were unrealized—as crypto prices were higher on December 31, 2024 as compared to September 30, 2024. Gains on our crypto asset investment portfolio were $357 million after reflecting the tax impact. Adjusted EBITDA was $1.3 billion. Our balance sheet strengthened, as we ended Q4 with $9.3 billion in $USD resources, up $1.1 billion Q/Q. Chapter 2: We continue to drive revenue and expand utility through product innovation. Coinbase advanced the cryptoeconomy by deepening institutional adoption, scaling international growth, and expanding real-world utility. Our investments in newer products helped drive revenue growth, and we continue to innovate with products that showcase the power of onchain finance. Base continued its rapid ascent, enabling developers to build new financial products that drive user engagement and ecosystem expansion. Chapter 3: There is strong momentum to finally achieve regulatory clarity for the industry. We remain deeply engaged in advancing policy frameworks to support a clear and innovation-friendly regulatory environment for crypto. Momentum is building in the US for legislation addressing stablecoins and broader market structure. We also made good progress with licenses internationally. Additionally, we achieved important developments in our ongoing litigation with the SEC. In January 2025, a district court granted our request for interlocutory appeal. Discovery is paused pending the outcome of this process. Chapter 4: Q1’25 Outlook. Through February 11, we have generated approximately $750 million of transaction revenue, and we expect Q1 subscription and services revenue to be within a range of $685-$765 million. We expect Q1 transaction expenses will be in the mid-to-high teens as a percentage of net revenue. We expect technology & development and general & administrative expenses to range from $750-$800 million reflecting growth in variable expenses related to elevated Trading Volume as well as payroll taxes and headcount. Finally, we expect sales and marketing expenses to increase Q/Q to $235-$375 million, driven by potential variability in i) performance marketing, and ii) USDC assets in our product suite which drive USDC rewards. Select Financial Metrics FULL YEAR FINANCIAL METRICS ($M) Q4’23 Q1’24 Q2’24 Q3’24 Q4’24 2024 2023 Net Revenue 905 1,588 1,380 1,129 2,197 6,293 2,927 Net Income 273 1,176 36 75 1,291 2,579 95 Adjusted EBITDA* 324 1,014 596 449 1,289 3,348 978 Q4’24 Coinbase Results vs. Outlook METRIC COINBASE Q4 OUTLOOK (October 2024) Q4 ACTUALS Subscription and Services Revenue $505-$580 million $641 million Transaction Expenses as a percentage of net revenue mid-to-high teens as a percentage of net revenue Dependent on revenue mix 14% Technology and Development + General and Administrative Expenses including stock-based compensation $690-$730 million Including ~$210 million in stock-based compensation $731 million including $205 million in stock-based compensation Sales and Marketing Expenses including stock-based compensation $170-$220 million Including ~$17 million in stock-based compensation $226 million including $17 million in stock-based compensation 2 *During the first quarter of 2024, we revised our definition of Adjusted EBITDA and recast prior periods for comparability. For the revised definition and for a reconciliation of net income (loss) to Adjusted EBITDA, please refer to the section titled “Revised Definition of Adjusted EBITDA” and the reconciliation table included at the end of this shareholder letter.",
+        "relevance": 0.42857142857142855,
+        "section": null,
+        "source_group_id": "coinbase-q424-original"
+      },
+      "ev-edde568b61789e3b438635e5": {
+        "chunk_id": "chunk-edde568b61789e3b438635e5",
+        "document_id": "doc-4f281bb6327a57b67a6a0462",
+        "evidence_id": "ev-edde568b61789e3b438635e5",
+        "number": 2,
+        "page": 10,
+        "quote": "Sales and marketing expenses were $226 million, up 37% Q/Q. We supported Q4 market momentum with elevated variable performance marketing spend and promotional initiatives to drive user acquisition and revenue growth both in the US and internationally. USDC rewards also grew 29% Q/Q to $80 million due to higher USDC assets in our product suite. Stock-based compensation expense was $222 million, down 11% Q/Q. Our effective tax rate in Q4 was 14%, and 12% for the full year. Our tax rate was lower than the US statutory rate of 21% primarily due to deductible stock-based compensation and research and development credits. Q4 net income was $1.3 billion and was impacted by $476 million in pre-tax gains on our crypto asset investment portfolio, the vast majority of which were unrealized. These gains were $357 million after reflecting the tax impact. Adjusted EBITDA was $1.3 billion. Share Count Our fully diluted share count at the end of Q4 was 286.5 million. Included in this figure are 253.6 million common shares and 32.9 million in dilutive shares. Capital and Liquidity At the end of Q4 we had $9.3 billion in $USD resources, which we define as cash and cash equivalents and USDC (net of USDC loaned or pledged as collateral). Our $USD resources increased $1.1 billion Q/Q or 13%. 9 *Net of USDC loaned or pledged as collateral. Note: Figures presented may not sum precisely due to rounding. TOTAL: $9,287MTotal $USD Resources CORPORATE CASH HELD AT THIRD PARTY VENUES $88M CORPORATE CASH $1,849M MONEY MARKET FUNDS $6,607M USDC* $743M",
+        "relevance": 0.42857142857142855,
+        "section": null,
+        "source_group_id": "coinbase-q424-original"
+      },
+      "ev-f98ed234ccd7ae7e4ab4e339": {
+        "chunk_id": "chunk-f98ed234ccd7ae7e4ab4e339",
+        "document_id": "doc-4f281bb6327a57b67a6a0462",
+        "evidence_id": "ev-f98ed234ccd7ae7e4ab4e339",
+        "number": 3,
+        "page": 2,
+        "quote": "Coinbase delivered strong Q4 and full year 2024 results, with full year revenue of $6.6 billion, net income of $2.6 billion, and Adjusted EBITDA of $3.3 billion. Zooming out, the last few months have demonstrated a sea change in the regulatory environment, unlocking new opportunities for Coinbase and the crypto industry. It’s the dawn of a new era for crypto. Crypto’s voice was heard loud and clear in the US elections, and the era of regulation via enforcement that crippled our industry in the US is on its way out. The Trump Administration is moving fast to fulfill its promise of making the US the crypto capital of the planet, and globally, leaders are taking notice and increasing their attention and investment into crypto. That means it’s time to double down on what we’ve always focused on: building. Our goals in 2025 are to drive revenue, drive utility, and scale our foundations. Our ambition to drive revenue reflects our intention to grow trading market share in the markets where we operate, to accelerate USDC market cap growth, and to continue growing our subscription and services revenue—including staking, custody, Coinbase One, and more. Utility starts with making crypto payments work for consumers and businesses, and we plan to do that by making it easier for users to adopt and use stablecoins. At the same time you will see us working hard to bring more people onchain through products like our leading layer 2 platform Base, SmartWallet, and Coinbase Developer Platform. Scaling foundations is about achieving landmark crypto legislation in the US and building the most trusted, scalable platform—both of which help pave the way for the next decade of growth. We are actively engaging with regulators and legislators to help shape crypto regulation in the US and we are confident that stablecoin and market structure legislation will pass. Scale also means continuing to strengthen our platform, so that customers get the best experiences on Coinbase even as we drive higher levels of adoption and increased utility. We believe the opportunity in front of us right now is unprecedented, and that we are well positioned to meet the moment. 1 Fellow Shareholders, [1] Q4 and full year 2024 net income included $476 million and $687 million in pre-tax gains on our crypto asset investment portfolio, respectively, the vast majority of which were unrealized. These gains were $357 million and $514 million after reflecting the tax impact, respectively. [2] Adjusted EBITDA is a non-GAAP financial measure. [3] $USD resources is defined as cash and cash equivalents and USDC (net of USDC loaned or pledged as collateral). [4] Assets under custody (“AUC”) is defined as the total US dollar equivalent value of USDC and crypto assets held separately on behalf of customers in digital wallets within our cold storage custody services, calculated based on the market price on the date of measurement. [5] Trading volume represents the total US dollar equivalent value of spot matched trades transacted between a buyer and seller through our platform during the period of measurement. Figures have been rounded for presentation purposes only. For additional financial information and a reconciliation between GAAP and non-GAAP results, please refer to the reconciliation of GAAP to Non- GAAP results table in this shareholder letter and our Form 10-K filed with the SEC on February 13, 2025.",
+        "relevance": 0.42857142857142855,
+        "section": null,
+        "source_group_id": "coinbase-q424-original"
+      }
+    },
+    "claim_coverage": {
+      "original": 5,
+      "supported_final": 5
+    },
+    "claim_lineage": [
+      {
+        "claim": {
+          "claim_id": "draft-liquidity-1",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-edde568b61789e3b438635e5"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Coinbase reported $9.3 billion in $USD resources at the end of Q4 2024; this company-defined measure includes cash and cash equivalents and net USDC."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "draft-liquidity-1",
+          "conflicts": [],
+          "evidence_support_score": 74.0,
+          "explanation": "Company disclosure gives $9.3 billion and explicitly defines USD resources to include net USDC.",
+          "status": "supported"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "draft-liquidity-2",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-edde568b61789e3b438635e5"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "Coinbase stated that its $USD resources increased $1.1 billion quarter over quarter in Q4 2024."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "draft-liquidity-2",
+          "conflicts": [],
+          "evidence_support_score": 74.0,
+          "explanation": "Company explicitly states a $1.1 billion Q/Q increase.",
+          "status": "supported"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "draft-liquidity-3",
+          "claim_type": "inference",
+          "evidence_ids": [
+            "ev-f98ed234ccd7ae7e4ab4e339"
+          ],
+          "metric_ids": [],
+          "risk_category": "liquidity",
+          "text": "The disclosed $USD resources measure should not be treated as cash alone because it also includes net USDC; these disclosures alone do not establish a final liquidity risk level."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "draft-liquidity-3",
+          "conflicts": [],
+          "evidence_support_score": 74.0,
+          "explanation": "Definition includes net USDC; this limited inference does not assign a risk level.",
+          "status": "supported"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "draft-regulatory-1",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-540ca2f380364fe9952d584b"
+          ],
+          "metric_ids": [],
+          "risk_category": "regulatory",
+          "text": "Coinbase reported that a district court granted its request for interlocutory appeal in January 2025 in its ongoing SEC litigation."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "draft-regulatory-1",
+          "conflicts": [],
+          "evidence_support_score": 74.0,
+          "explanation": "The letter describes the January interlocutory appeal grant; claim preserves company attribution.",
+          "status": "supported"
+        }
+      },
+      {
+        "claim": {
+          "claim_id": "draft-regulatory-2",
+          "claim_type": "fact",
+          "evidence_ids": [
+            "ev-540ca2f380364fe9952d584b"
+          ],
+          "metric_ids": [],
+          "risk_category": "regulatory",
+          "text": "Coinbase stated that discovery was paused pending the outcome of the interlocutory appeal process; this is a company disclosure, not an independent legal finding."
+        },
+        "parent_claim_id": null,
+        "round": 0,
+        "verification": {
+          "checks": {
+            "citation_ids": true,
+            "cutoff_date": true,
+            "metric_inputs": true,
+            "no_conflicts": true,
+            "no_overstatement": true,
+            "numerical_consistency": true,
+            "quote_location": true,
+            "recalculable": true,
+            "semantic_support": true,
+            "unit_period_currency": true
+          },
+          "claim_id": "draft-regulatory-2",
+          "conflicts": [],
+          "evidence_support_score": 74.0,
+          "explanation": "The letter states discovery is paused pending this process; claim preserves attribution.",
+          "status": "supported"
+        }
+      }
+    ],
+    "config": {
+      "max_llm_calls": 10,
+      "max_repair_rounds": 1,
+      "max_tool_calls": 12,
+      "retrieval_limit": 12,
+      "run_timeout_seconds": 180.0
+    },
+    "config_hash": "eb0566f462be696e4a8dd1d6a6820aef6f9a607039b9ca95b285a426ba7438f6",
+    "corpus_hash": "ef72359166d0338bb7a6bce6f7f4631f2830b1de3b79ede064cbe515c19c7b7e",
+    "corpus_manifest_hash": "80e7812fb891120188a158ea50a6783f72a1c7a714030ec8fc3d0be9d695bf34",
+    "corpus_version": "coinbase-q424-v1",
+    "cost": null,
+    "dirty": false,
+    "embedding_calls": null,
+    "embedding_dimensions": 256,
+    "embedding_model": "demo-hash256-v1",
+    "embedding_provider": "local_fixture",
+    "finished_at": "2026-10-14T08:02:02.192486+00:00",
+    "formula_version": "decimal-v1",
+    "git_commit": null,
+    "historical_limitation": "Frozen at retrieval in October 2026; original dated PDF, not independently archived on publication day.",
+    "index_version": "p1-chroma-v1",
+    "label": "SIMULATED MODEL RESPONSES / REAL FIXED DOCUMENT",
+    "mode": "demo",
+    "model": "p2-demo-v1",
+    "model_calls": 6,
+    "model_fixture_hash": "6e7f3df9cf561344eb6cb084f855416fc080f00040972d73e4830a0c5829978d",
+    "p2_content_hashes": {
+      "app/configuration/verification_p2_v1.json": "baa608675ff2ca31c308be3001589d8a981398753c559ac4936ef274efe848b4",
+      "app/prompts/analyst_p2_v1.txt": "6d169ddec5fd6b73d4b2f5fc77be3fca54d49e88eb510d3ae03fa76b4f120553",
+      "app/prompts/extract_p2_v1.txt": "7e3327a30070a45367f2d06d21204238c1e9d916d701ff298d2e6902e9e542fe",
+      "app/prompts/repair_p2_v1.txt": "cf1d04b3667cc221db5f4503cc6906698eb3cd912fd1df78d9e860d65f6dac5b",
+      "app/prompts/verifier_p2_v1.txt": "471f3291819b6ab4ab3419308633fd7d9e4331b72baec8dbadfc214186ae1a88",
+      "app/tools/metrics.py": "f3154d86d7a7e588b97668d165b25b12af7e34d213c3e53de1d5c7463e544f30",
+      "tests/fixtures/p2_semantic_v1.json": "44003b53995661b8b73515684061a29170719904ae35c9c6a90a8d8de014e2f6",
+      "tests/fixtures/regression/p2_adversarial_v1.json": "a984b81445c61d8273e06a060be79a7448ca3ac3edb5806b3d9d88c23765a82b",
+      "tests/fixtures/regression/p2_adversarial_v2.json": "29469392c082addffb7318a7e978a526181cbad8f4cb2fdeb65beea18bf0d709"
+    },
+    "parser_version": "p1-parser-v1",
+    "prompt_hashes": {
+      "analyst_p1_v1.txt": "8b55164c186ff1eb29e2e9cab965f3b168d521f37b2358b0e3ad6075bf42234e",
+      "planner_p1_v1.txt": "2b8df6c39cbaabb6190797fe59246f40b15c9693fd748ded24de2ed0fa6a3ff3",
+      "research_p1_v1.txt": "1325360667363647eeb55856f9e1d629685393faf116cb7188b74944f9b47132"
+    },
+    "prompt_version": "p2-v1",
+    "provider": "fixture",
+    "provider_failures": [],
+    "randomness": null,
+    "repair_count": 0,
+    "retrieval_config": {
+      "limit": 12,
+      "max_candidates": 48,
+      "rerank": "lexical-overlap-v1"
+    },
+    "rubric_version": "verification-p2-v1",
+    "schema_version": "1+p1-v1+p2-v1",
+    "simulated": true,
+    "stage": "P2",
+    "started_at": "2026-10-14T08:01:59.443737+00:00",
+    "tool_calls": 1,
+    "usage_reason": "Simulated or provider usage unavailable; null is not zero.",
+    "verification_implemented": true,
+    "verification_results": [
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "draft-liquidity-1",
+        "conflicts": [],
+        "evidence_support_score": 74.0,
+        "explanation": "Company disclosure gives $9.3 billion and explicitly defines USD resources to include net USDC.",
+        "status": "supported"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "draft-liquidity-2",
+        "conflicts": [],
+        "evidence_support_score": 74.0,
+        "explanation": "Company explicitly states a $1.1 billion Q/Q increase.",
+        "status": "supported"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "draft-liquidity-3",
+        "conflicts": [],
+        "evidence_support_score": 74.0,
+        "explanation": "Definition includes net USDC; this limited inference does not assign a risk level.",
+        "status": "supported"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "draft-regulatory-1",
+        "conflicts": [],
+        "evidence_support_score": 74.0,
+        "explanation": "The letter describes the January interlocutory appeal grant; claim preserves company attribution.",
+        "status": "supported"
+      },
+      {
+        "checks": {
+          "citation_ids": true,
+          "cutoff_date": true,
+          "metric_inputs": true,
+          "no_conflicts": true,
+          "no_overstatement": true,
+          "numerical_consistency": true,
+          "quote_location": true,
+          "recalculable": true,
+          "semantic_support": true,
+          "unit_period_currency": true
+        },
+        "claim_id": "draft-regulatory-2",
+        "conflicts": [],
+        "evidence_support_score": 74.0,
+        "explanation": "The letter states discovery is paused pending this process; claim preserves attribution.",
+        "status": "supported"
+      }
+    ],
+    "verification_version": "p2-conflicts-v2"
+  },
+  "metrics": [
+    {
+      "formula": "current_assets / current_liabilities",
+      "inputs": [],
+      "limitations": [
+        "missing_input"
+      ],
+      "metric_id": "metric-5485c4101e0c5903f07612ae",
+      "name": "current_ratio",
+      "status": "missing_input",
+      "value": null
+    },
+    {
+      "formula": "cash_and_cash_equivalents / current_liabilities",
+      "inputs": [],
+      "limitations": [
+        "missing_input"
+      ],
+      "metric_id": "metric-46a5077ce5680402e70c2f19",
+      "name": "cash_ratio",
+      "status": "missing_input",
+      "value": null
+    },
+    {
+      "formula": "total_debt / total_equity",
+      "inputs": [],
+      "limitations": [
+        "missing_input"
+      ],
+      "metric_id": "metric-8e06c6824a9a046127aa1a2c",
+      "name": "debt_to_equity",
+      "status": "missing_input",
+      "value": null
+    },
+    {
+      "formula": "EBIT / interest_expense",
+      "inputs": [],
+      "limitations": [
+        "missing_input"
+      ],
+      "metric_id": "metric-eb871101d11d1e0029b07a5c",
+      "name": "interest_coverage",
+      "status": "missing_input",
+      "value": null
+    },
+    {
+      "formula": "(OCF_current - OCF_previous) / abs(OCF_previous)",
+      "inputs": [],
+      "limitations": [
+        "missing_input"
+      ],
+      "metric_id": "metric-1c1c5358772c9006783f3635",
+      "name": "operating_cash_flow_change",
+      "status": "missing_input",
+      "value": null
+    }
+  ],
+  "overall_risk": "UNKNOWN",
+  "risk_factors": [
+    {
+      "category": "liquidity",
+      "level": "UNKNOWN",
+      "missing_data": [
+        "Category risk evidence/rubric coverage"
+      ],
+      "rationale": "Verified observations retained; insufficient reviewed signals to assign a risk level.",
+      "verified_claim_ids": [
+        "draft-liquidity-1",
+        "draft-liquidity-2",
+        "draft-liquidity-3"
+      ]
+    },
+    {
+      "category": "regulatory",
+      "level": "UNKNOWN",
+      "missing_data": [
+        "Category risk evidence/rubric coverage"
+      ],
+      "rationale": "Verified observations retained; insufficient reviewed signals to assign a risk level.",
+      "verified_claim_ids": [
+        "draft-regulatory-1",
+        "draft-regulatory-2"
+      ]
+    }
+  ],
+  "run_id": "5be00354-022b-4c1c-8c59-d013a95f12f4",
+  "sources": [
+    {
+      "content_hash": "2f3824cd25f11c50944a4844716ab3208bfbc38bbc4dc6024b37ec3be4ac328b",
+      "document_id": "doc-4f281bb6327a57b67a6a0462",
+      "local_path": "<public-checkout>/data/documents/5be00354-022b-4c1c-8c59-d013a95f12f4/2f3824cd25f11c50944a4844716ab3208bfbc38bbc4dc6024b37ec3be4ac328b.pdf",
+      "published_at": "2025-02-13",
+      "retrieved_at": "2026-10-14T08:02:01.287697Z",
+      "source_type": "pdf",
+      "title": "Coinbase Q4 and Full Year 2024 Shareholder Letter",
+      "url": "https://s27.q4cdn.com/397450999/files/doc_financials/2024/q4/Q4-24-Shareholder-Letter.pdf"
+    }
+  ],
+  "status": "partial",
+  "summary": "Coinbase reported $9.3 billion in $USD resources at the end of Q4 2024; this company-defined measure includes cash and cash equivalents and net USDC.\nCoinbase stated that its $USD resources increased $1.1 billion quarter over quarter in Q4 2024.\nThe disclosed $USD resources measure should not be treated as cash alone because it also includes net USDC; these disclosures alone do not establish a final liquidity risk level.\nCoinbase reported that a district court granted its request for interlocutory appeal in January 2025 in its ongoing SEC litigation.\nCoinbase stated that discovery was paused pending the outcome of the interlocutory appeal process; this is a company disclosure, not an independent legal finding."
+}

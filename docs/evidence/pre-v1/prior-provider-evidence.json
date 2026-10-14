@@ -1,0 +1,287 @@
+{
+  "label": "Historical real-provider execution; not rerun for pre-v1 and not a quality benchmark",
+  "sources": {
+    "evaluation/audit/P4/attempt-005/runtime-summary.json": "0c87c62f6d2e13989f7bb7f8d7d90299c6ee6a976f12e9ffde51ae202fd0f9cb",
+    "evaluation/audit/P4/attempt-003/groq-smoke.json": "7f92d8693792ff1a2c562d0538a35399ce91e4c00727f7d75a514bc18b72b669",
+    "evaluation/audit/P4/attempt-002/provider-summary.json": "7f64c4a31d89de9b5ea4c1c5242832c9fcafa91ebef6990a61858bc99d247147",
+    "evaluation/audit/P4/attempt-002/provider-diagnostic.json": "6789b0140cfc74e0afd2153e0892e2e38805eb3bc0eb3d578688151923e2b152"
+  },
+  "chat_smoke": {
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "simulated": false,
+    "scope": "CHAT ONLY; no embeddings, retrieval, trades or full RAG",
+    "sdk_max_retries": 0,
+    "llm_call_limit": 2,
+    "total_timeout_seconds": 90,
+    "actual_usage": [
+      {
+        "input_tokens": 531,
+        "output_tokens": 88,
+        "total_tokens": 619,
+        "input_token_details": {},
+        "output_token_details": {
+          "reasoning": 36
+        }
+      },
+      {
+        "input_tokens": 380,
+        "output_tokens": 543,
+        "total_tokens": 923,
+        "input_token_details": {},
+        "output_token_details": {
+          "reasoning": 375
+        }
+      }
+    ],
+    "provider_failures": [],
+    "llm_calls": 2,
+    "latency_seconds": 3.0907756649976363,
+    "cost": null,
+    "status": "PASS"
+  },
+  "tool_calling": {
+    "status": "PASS",
+    "action": "tool",
+    "tool_name": "search_documents",
+    "arguments_validated": true,
+    "tool_executed": false
+  },
+  "structured_output": {
+    "status": "PASS",
+    "schema": "ResearchPlan",
+    "strict": true,
+    "validated": true
+  },
+  "development_preview": {
+    "live_execution_count": 1,
+    "provider": "groq",
+    "model": "openai/gpt-oss-120b",
+    "cost": null,
+    "cost_status": "unknown",
+    "research_validity": "FAIL/BLOCKED",
+    "h4_approved": false,
+    "p5_started": false,
+    "protocol_test_status": "FAIL"
+  },
+  "per_arm": [
+    {
+      "arm": "A",
+      "runtime_status": "completed",
+      "protocol_acceptance": "PASS",
+      "failure_reasons": [],
+      "execution_error": null,
+      "provider_failures": [],
+      "calls": 1,
+      "latency_seconds": 1.1986212889969465,
+      "latency_kind": "arm incremental execution",
+      "actual_usage": [
+        {
+          "input_token_details": {},
+          "input_tokens": 501,
+          "output_token_details": {
+            "reasoning": 252
+          },
+          "output_tokens": 356,
+          "total_tokens": 857
+        }
+      ],
+      "usage_completeness": "KNOWN",
+      "tokens": {
+        "input_tokens": 501,
+        "output_tokens": 356,
+        "total_tokens": 857
+      }
+    },
+    {
+      "arm": "B",
+      "runtime_status": "completed",
+      "protocol_acceptance": "PASS",
+      "failure_reasons": [],
+      "execution_error": null,
+      "provider_failures": [],
+      "calls": 1,
+      "latency_seconds": 2.5739969970018137,
+      "latency_kind": "shared Analyst generation",
+      "actual_usage": [
+        {
+          "input_token_details": {},
+          "input_tokens": 1014,
+          "output_token_details": {
+            "reasoning": 310
+          },
+          "output_tokens": 836,
+          "total_tokens": 1850
+        }
+      ],
+      "usage_completeness": "KNOWN",
+      "tokens": {
+        "input_tokens": 1014,
+        "output_tokens": 836,
+        "total_tokens": 1850
+      }
+    },
+    {
+      "arm": "C",
+      "runtime_status": "completed",
+      "protocol_acceptance": "PASS",
+      "failure_reasons": [],
+      "execution_error": null,
+      "provider_failures": [],
+      "calls": 1,
+      "latency_seconds": 3.4434000680048484,
+      "latency_kind": "arm incremental execution",
+      "actual_usage": [
+        {
+          "input_token_details": {},
+          "input_tokens": 1403,
+          "output_token_details": {
+            "reasoning": 911
+          },
+          "output_tokens": 1328,
+          "total_tokens": 2731
+        }
+      ],
+      "usage_completeness": "KNOWN",
+      "tokens": {
+        "input_tokens": 1403,
+        "output_tokens": 1328,
+        "total_tokens": 2731
+      }
+    },
+    {
+      "arm": "D",
+      "runtime_status": "completed",
+      "protocol_acceptance": "PASS",
+      "failure_reasons": [],
+      "execution_error": null,
+      "provider_failures": [],
+      "calls": 0,
+      "latency_seconds": 0.010483142003067769,
+      "latency_kind": "arm incremental execution",
+      "actual_usage": [],
+      "usage_completeness": "KNOWN",
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      }
+    },
+    {
+      "arm": "C_REPAIR",
+      "runtime_status": "partial",
+      "protocol_acceptance": "FAIL",
+      "failure_reasons": [
+        "repair_rejected"
+      ],
+      "execution_error": null,
+      "provider_failures": [
+        {
+          "code": "provider_rate_limited",
+          "http_status": 429,
+          "retryable": true
+        }
+      ],
+      "calls": 2,
+      "latency_seconds": 3.4735641879960895,
+      "latency_kind": "arm incremental execution",
+      "actual_usage": [
+        {
+          "input_token_details": {},
+          "input_tokens": 1403,
+          "output_token_details": {
+            "reasoning": 922
+          },
+          "output_tokens": 1374,
+          "total_tokens": 2777
+        },
+        null
+      ],
+      "usage_completeness": "UNKNOWN_RETAINED",
+      "tokens": null
+    }
+  ],
+  "openai_prior_attempt": {
+    "summary": {
+      "selection": {
+        "case_ids": [
+          "dev-00"
+        ],
+        "scope": "development_smoke"
+      },
+      "mode": "offline_research",
+      "simulated": false,
+      "models": [
+        "gpt-5.6-Sol"
+      ],
+      "arms": [
+        {
+          "arm": "B",
+          "status": "failed",
+          "claims": 0,
+          "gaps": [
+            "shared_baseline_failed"
+          ],
+          "llm_calls": 1,
+          "actual_usage": null,
+          "repair_count": 0
+        },
+        {
+          "arm": "C",
+          "status": "failed",
+          "claims": 0,
+          "gaps": [
+            "shared_baseline_failed"
+          ],
+          "llm_calls": 0,
+          "actual_usage": null,
+          "repair_count": 0
+        },
+        {
+          "arm": "D",
+          "status": "failed",
+          "claims": 0,
+          "gaps": [
+            "shared_baseline_failed"
+          ],
+          "llm_calls": 0,
+          "actual_usage": null,
+          "repair_count": 0
+        },
+        {
+          "arm": "C_REPAIR",
+          "status": "failed",
+          "claims": 0,
+          "gaps": [
+            "shared_baseline_failed"
+          ],
+          "llm_calls": 0,
+          "actual_usage": null,
+          "repair_count": 0
+        },
+        {
+          "arm": "A",
+          "status": "failed",
+          "claims": 0,
+          "gaps": [
+            "raw_arm_failed"
+          ],
+          "llm_calls": 1,
+          "actual_usage": [],
+          "repair_count": 0
+        }
+      ]
+    },
+    "diagnostic": {
+      "status": "failed",
+      "case_id": "dev-00",
+      "exception_types": [
+        "OpenAIModelNotFoundError",
+        "NotFoundError"
+      ],
+      "http_status": 404,
+      "error_body_logged": false
+    },
+    "limitation": "Historical configured model was unavailable (404); no successful OpenAI live validation."
+  }
+}

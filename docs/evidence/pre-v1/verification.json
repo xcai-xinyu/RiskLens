@@ -1,0 +1,61 @@
+{
+  "task": "authorized portfolio pre-v1 preparation",
+  "date": "2026-10-14",
+  "timezone": "Asia/Singapore",
+  "technical_status": "PASS",
+  "scope": "keyless engineering snapshot; not complete v1",
+  "current_stage": "P4",
+  "research_validity": "FAIL/BLOCKED",
+  "H4": "NOT_APPROVED",
+  "H5": "NOT_APPROVED",
+  "checks": {
+    "new_setup_and_affected_regression": {
+      "status": "PASS",
+      "passed": 5,
+      "log": "targeted-public-snapshot.txt"
+    },
+    "activated_regressions": {
+      "status": "PASS",
+      "passed": 185,
+      "log": "activated-regressions.txt"
+    },
+    "full_offline_suite": {
+      "status": "PASS",
+      "passed": 198,
+      "log": "full-offline-tests-final.txt"
+    },
+    "source_acquisition": "PASS: official source fetched and original hash verified",
+    "cli_api_ui_restart_compare": "PASS: runtime-summary.json",
+    "lint": "PASS: lint.txt and lint-additional.txt",
+    "compile": "PASS: compile.txt",
+    "type_check": "N/A: no static type checker configured",
+    "docker": "NOT_VERIFIED: P5 remains planned",
+    "fresh_dependency_environment": "NOT_VERIFIED: existing WSL .venv reused",
+    "real_provider_calls_this_task": 0
+  },
+  "earlier_failures": [
+    {
+      "check": "install",
+      "reason": "pip absent in existing environment",
+      "resolution": "ensurepip, then locked install passed"
+    },
+    {
+      "check": "network/socket",
+      "reason": "sandbox blocked network and local sockets",
+      "resolution": "authorized official download and loopback-only runtime passed"
+    },
+    {
+      "check": "first public full suite",
+      "passed": 197,
+      "failed": 1,
+      "reason": "existing p2_examples dependency omitted from allowlist",
+      "resolution": "included unchanged module; final full suite 198 passed"
+    },
+    {
+      "check": "audit helper lint",
+      "reason": "imports and explicit subprocess check keyword",
+      "resolution": "style/default-explicit corrections only; lint passed"
+    }
+  ],
+  "publication_status": "prepared; consult Git branch/remote for actual upload, not this pre-commit record"
+}
