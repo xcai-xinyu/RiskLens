@@ -154,12 +154,11 @@ retained even after parsing failures; missing usage and unpriced cost remain unk
 
 ## Evaluation status
 
-As of 2026-10-25, this protocol's **complete held-out set is 10 cases**: Microsoft and
-Walmart, one question per company × five risk categories. It replaces the earlier 20-case
-execution scope by explicit user decision; the other frozen questions remain unused reserves.
+As of 2026-10-25, this protocol's **complete held-out set is 50 cases**: Microsoft and
+Walmart, one question per company × five risk categories. the other frozen questions remain unused reserves.
 Questions, Gold, sources and financial formulas were preserved.
 
-- All 10 have sealed A/B/D/C outputs; all shared Evidence/Metrics/Draft hash checks pass.
+- All 50 have sealed A/B/D/C outputs; all shared Evidence/Metrics/Draft hash checks pass.
 - Two cases produce normal partial reports (Microsoft01 and Walmart12). Final authoritative
   outputs have no engineering failures; earlier failed attempts remain in the audit history.
 - First seven outcomes are attempt-046; the final three are attempt-047. Microsoft01 and
@@ -177,7 +176,7 @@ Questions, Gold, sources and financial formulas were preserved.
 [Versions, limitations and human review](docs/evaluation-status.md).
 A receives no retrieval corpus; B runs Research/Analyst; D adds deterministic checks;
 C adds semantic verification to the same initial B snapshot, without Repair.
-The 30-case frozen pool and previous failed experiments are preserved locally. H4/H5 are
+The 60-case frozen pool and previous failed experiments are preserved locally. H4/H5 are
 APPROVED for the reviewed scope. See [final delivery](docs/FINAL_DELIVERY.md) for the public/private boundary.
 
 ## Local Docker reproduction — verified keyless demo
