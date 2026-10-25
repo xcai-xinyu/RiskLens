@@ -7,7 +7,8 @@ from langgraph.graph import END, START, StateGraph
 from pydantic import ValidationError
 
 from app.p1_contracts import AnalystDraft, P1State, ResearchTurn, ToolEvent
-from app.schemas import Evidence, Gap, ResearchPlan, RiskFactor, RiskReport
+from app.planning import validate_plan
+from app.schemas import Evidence, Gap, RiskFactor, RiskReport
 
 
 class P1Workflow:
@@ -32,7 +33,7 @@ class P1Workflow:
 
     async def planner(self, state):
         try:
-            plan = ResearchPlan.model_validate(await self.model_call(
+            plan = validate_plan(await self.model_call(
                 state,self.adapter.make_plan,state.request,self.company_id))
             if plan.company_id != self.company_id:
                 raise ValueError('company_override_forbidden')

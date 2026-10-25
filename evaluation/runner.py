@@ -23,6 +23,16 @@ from evaluation.scorers import VERSION, aggregate, score
 ROOT=Path(__file__).resolve().parent.parent
 
 
+def load_candidate_dataset(directory, **kwargs):
+    from evaluation.candidate_data import load_candidate_dataset as load
+    return load(directory, **kwargs)
+
+
+async def evaluate_candidate(directory, case_id, **kwargs):
+    from evaluation.candidate_runner import evaluate_candidate as run
+    return await run(directory, case_id, **kwargs)
+
+
 def digest(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True).encode()).hexdigest()
 
@@ -83,6 +93,10 @@ class FixtureAdapter:
 class ProviderAdapter(OpenAIP2Adapter):
     def __init__(self, call_budget=None):
         selected = make_chat_adapter(stage='P2')
+        if selected.model == 'gpt-6.1-sol':
+            # This historical runner copies LangChain internals. The new model must
+            # use the frozen v5 protocol, never silently bypass it here.
+            raise ValueError('new_model_requires_frozen_responses_runner')
         self.__dict__.update(selected.__dict__)
         self.provider = selected.provider
         self.call_budget = call_budget

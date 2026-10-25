@@ -23,6 +23,15 @@ class OpenAIAdapter:
     """Isolated opt-in structured-output smoke, not a live research workflow."""
     async def plan(self, request):
         from langchain_openai import ChatOpenAI
+        if os.environ.get('LLM_MODEL') == 'gpt-6.1-sol':
+            from app.providers import make_chat_adapter
+            adapter = make_chat_adapter(max_calls=1)
+            try:
+                wire = adapter.build_wire('planner', (ROOT/'app/prompts/smoke_v1.txt').read_text(),
+                                          request.model_dump(mode='json'), schema=ResearchPlan)
+                return await adapter.request(wire, role='planner', schema=ResearchPlan)
+            finally:
+                await adapter.close()
         if not os.environ.get('OPENAI_API_KEY') or not os.environ.get('LLM_MODEL'):
             raise ValueError('provider_configuration_missing')
         if os.environ.get('LLM_PROVIDER', 'openai') != 'openai':

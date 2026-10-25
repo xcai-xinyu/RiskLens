@@ -100,3 +100,8 @@ evaluation/results/
 !/evaluation/audit/P3/attempt-001/artifacts/source/tests/
 /evaluation/audit/P3/attempt-001/artifacts/source/tests/*
 !/evaluation/audit/P3/attempt-001/artifacts/source/tests/test_p3.py
+
+# Private reusable provider index; never publish vectors/source cache.
+/data/runtime-cache/
+# Reviewed publication excludes original real-company Gold and unused reserve cases.
+/evaluation/datasets/p4-v3*/

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-25",
+  "H4": "APPROVED_BY_OWNER",
+  "H5": "APPROVED_BY_OWNER",
+  "owner_attestation": "Human review and demo reproduction completed",
+  "scope": "10 revised held-out cases, mixed recovery/version strata disclosed; P5 container engineering",
+  "p4_full_offline": {
+    "passed": 689,
+    "reused_evidence": true
+  },
+  "p5_regression": {
+    "passed": 283,
+    "actually_rerun_in_attempt_003": true
+  },
+  "container_build": "PASS",
+  "api_ui_health": "PASS",
+  "demo_http": "PASS",
+  "ui_apptest_real_http": "PASS",
+  "container_recreation_history": "PASS",
+  "new_paid_calls_for_closure_and_publication": 0,
+  "per_point_semantic_scores": "NOT_SUPPLIED",
+  "verifier_improvement": "NOT_ESTABLISHED",
+  "public_test_scope": "portable engineering subset; the full local test/regression counts additionally depend on private frozen reviewer material",
+  "source_seals": {
+    "P4_attempt_047": "e531862450d4a17a7aa40ad9cd871cc3733e5f939932d67845211a8e48a5a603",
+    "P5_attempt_003": "f9bead3fd278718a4855b0da5399d79b7d84624e41aa02ec146d1b6c1f439a99"
+  }
+}

@@ -1,0 +1,1 @@
+{"run_id": "880221ca-5f78-4162-9126-5e21bdd883c8", "report_sha256": "1aa8fcfb95f470ad25027d464557dcd2a073e294b92b6f689cb486e28d58b5e1", "status": "partial", "simulated": true, "claims": 5, "metrics": 5, "check": "persistence", "result": "PASS", "paid_requests": 0}

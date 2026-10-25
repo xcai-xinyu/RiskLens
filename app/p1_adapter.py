@@ -6,7 +6,7 @@ from typing import Protocol
 
 from app.adapter import ROOT
 from app.p1_contracts import AnalystDraft, ResearchTurn, ToolCall
-from app.schemas import ResearchPlan
+from app.planning import ResearchPlan, planner_prompt
 from app.tools.research import TOOL_SCHEMAS
 
 
@@ -83,6 +83,8 @@ class OpenAIResearchAdapter:
             raise failure from None
 
     def messages(self, role, data):
+        if role == 'planner':
+            return [('system', planner_prompt()), ('human', json.dumps(data, ensure_ascii=False))]
         return [('system',(ROOT/f'app/prompts/{role}_p1_v1.txt').read_text()),
                 ('human',json.dumps(data,ensure_ascii=False))]
 
@@ -139,6 +141,8 @@ class APIEmbedding:
         if not 1 <= self.dimensions <= 8192:
             raise ValueError('embedding_dimensions_invalid')
         self.client = OpenAIEmbeddings(model=os.environ['EMBEDDING_MODEL'],
+            api_key=os.environ['OPENAI_API_KEY'],
+            base_url=os.environ.get('EMBEDDING_BASE_URL', 'https://api.openai.com/v1'),
             dimensions=self.dimensions, request_timeout=30, max_retries=0, check_embedding_ctx_length=False)
         self.calls = 0
 

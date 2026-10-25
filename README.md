@@ -1,6 +1,9 @@
 # RiskLens — Evidence-Aware Financial Risk Research Agent
 
-**pre-v1 · work in progress · P4 research evaluation and human review incomplete**
+**pre-v1 · 10-case P4 execution sealed · H4/H5 approved · quantified quality claims remain limited**
+
+The publication snapshot includes the completed P4/P5 engineering scope and the owner's
+H4/H5 approval. Private source files, reserve questions and raw audit logs remain local.
 
 RiskLens explores a practical problem in financial research: an answer can sound convincing
 while using the wrong period, miscalculating a ratio, or citing a passage that does not support
@@ -16,17 +19,17 @@ uses simulated model decisions. No benchmark improvement or Verifier superiority
 | --- | --- |
 | Implemented and verified with deterministic tests/demo | Bounded LangGraph workflow; Pydantic contracts; PDF ingestion and local retrieval; cutoff/source checks; Decimal financial metrics; conflict/overstatement handling; bounded repair and re-verification; deterministic JSON/Markdown reports. |
 | Implemented and verified as product engineering | Shared ResearchService behind CLI/FastAPI, Streamlit via HTTP, SQLite report history, interrupted-run recovery, exports and comparisons that flag unequal source coverage. |
-| Implemented with narrow real-provider evidence | Explicit OpenAI/Groq chat adapters, classified errors, zero SDK retries and usage tracking. Prior Groq tool-call/structured-output smoke and a single real development protocol preview exist; the repair arm was partial. |
-| Implemented but not validated end to end | Full real-provider research with embeddings/search; real semantic accuracy, injection resistance and financial judgment quality. OpenAI chat transport is unit-tested but no successful live OpenAI run is claimed. |
-| In progress | P4 dataset/source review, semantic scoring proposal and valid research evaluation. H4 is not approved. |
-| Planned | P5 Docker and clean-environment v1 delivery. No Docker validation or public service deployment is claimed. |
+| Implemented with real-provider execution evidence | Independent OpenAI Responses adapter, explicit Groq selection, tool/structured output, usage and request IDs, classified failures and bounded accounting. OpenAI `gpt-6.1-sol` completed the authorized 10-case fixed-corpus A/B/D/C run with recovery/version differences recorded. |
+| Not established by these runs | Semantic correctness, Verifier superiority, financial judgment quality, and end-to-end live web research. Real fixed-corpus execution is different from these research claims. |
+| Human gates approved | The owner confirmed human review and demo reproduction and explicitly approved H4/H5. Detailed per-point semantic scores were not supplied; approval does not produce an accuracy or improvement figure. |
+| P5 accepted | No-cache Docker build, API/UI health, keyless API and UI demo, and unchanged report history after container recreation passed (P5 attempt-003). This follow-up authorizes a checked GitHub publication; no hosted API/UI service is configured. |
 
-[Actual verification record](docs/evidence/pre-v1/README.md) ·
+[Current verification record](docs/evidence/release-2026-10-25/README.md) ·
 [Evaluation blockers](docs/evaluation-status.md) · [Resume material](docs/portfolio.md)
 
 ## Architecture
 
-Solid boxes/edges are implemented; the dotted path is planned delivery work.
+The workflow and local Docker delivery below have runtime evidence. Public hosting remains outside this implementation.
 
 ```mermaid
 flowchart TD
@@ -43,8 +46,7 @@ flowchart TD
     S --> DB[Repository / SQLite history]
     R --> IDX[Repository / rebuildable Chroma index]
     F --> DB
-    S -. planned P5 .-> D[Docker / clean-environment v1]
-    style D stroke-dasharray: 5 5
+    S --> D[Local Docker Compose / clean image reproduction]
 ```
 
 Facts and inferences carry evidence/metric IDs. Citations retain source title, date,
@@ -152,21 +154,43 @@ retained even after parsing failures; missing usage and unpriced cost remain unk
 
 ## Evaluation status
 
-P4 research validity remains **FAIL / BLOCKED**, not merely awaiting a benchmark score:
+As of 2026-10-25, this protocol's **complete held-out set is 10 cases**: Microsoft and
+Walmart, one question per company × five risk categories. It replaces the earlier 20-case
+execution scope by explicit user decision; the other frozen questions remain unused reserves.
+Questions, Gold, sources and financial formulas were preserved.
 
-- Frozen v2 has 10 development entries but only 5 distinct questions; reference text leaks
-  into all development questions. It cannot support a valid quality comparison.
-- Development uses one Coinbase source; the 20 held-out cases are synthetic, and risk-category
-  coverage is incomplete. Real development metric coverage is missing.
-- Exact-reference scoring cannot resolve semantically correct paraphrases. Gold/source
-  review and the replacement real-company candidate set are unfinished.
-- A prior real Groq dev-00 run completed A/B/C/D but its separate repair arm hit a 429.
-  This is narrow execution evidence, not a completed benchmark or proof of improvement.
+- All 10 have sealed A/B/D/C outputs; all shared Evidence/Metrics/Draft hash checks pass.
+- Two cases produce normal partial reports (Microsoft01 and Walmart12). Final authoritative
+  outputs have no engineering failures; earlier failed attempts remain in the audit history.
+- First seven outcomes are attempt-046; the final three are attempt-047. Microsoft01 and
+  Walmart14 were exposed during engineering recovery and reuse compatible checkpoints.
+  This is **not ten uniformly unseen, single-version first executions**.
+- Claims retained: A40, B98, D98, C95. These are counts, **not accuracy or improvement scores**.
+  The owner approved H4 after human review. The historical 1,850 assessment cells were not
+  populated from that generic approval; numerical semantic scores remain unavailable.
+  Coverage, correctness and citation support are separate. No Verifier advantage is established.
+- Batch known cost estimate: USD4.99259402; unresolved timeout reservation: USD0.19309250;
+  committed against the USD8 cap: USD5.18568652. Costs use recorded usage and conservative
+  pricing, not a Billing balance. Unknown fees were not set to zero.
 
-[Detailed status and historical evidence](docs/evaluation-status.md). The A/B/C/D harness
-preserves shared B/C/D inputs, independent arm records, failures, hashes, versions, latency
-and usage. Frozen replay does not validate fresh retrieval. No new provider or held-out
-research experiments were run for this publication; human H4/H5 approvals remain outstanding.
+[Per-case/arm execution table](docs/evidence/p4-ten-case-results.csv) ·
+[Versions, limitations and human review](docs/evaluation-status.md).
+A receives no retrieval corpus; B runs Research/Analyst; D adds deterministic checks;
+C adds semantic verification to the same initial B snapshot, without Repair.
+The 30-case frozen pool and previous failed experiments are preserved locally. H4/H5 are
+APPROVED for the reviewed scope. See [final delivery](docs/FINAL_DELIVERY.md) for the public/private boundary.
+
+## Local Docker reproduction — verified keyless demo
+
+No API keys are required. The image fetches the existing public demo PDF by its fixed hash,
+uses simulated model decisions, and copies no local DB, vector index, Gold or audit bundle.
+Both published ports bind to localhost. Reports use a named SQLite volume.
+
+See [the P5 reproduction procedure](docs/P5_REPRODUCTION.md), including build, health, demo,
+container recreation and persistent-report comparison. P5 attempt-003 verified a clean image
+build from the recorded local worktree and an empty named volume. Recreated containers retained
+the exact report hash without the previous Chroma/document working directory. Streamlit AppTest
+used the container's real HTTP API; human browser/clean-checkout acceptance remains pending.
 
 ## Verification
 
@@ -174,13 +198,17 @@ After acquiring the source:
 
 ```bash
 PYTHON_DOTENV_DISABLED=1 python -m pytest -q tests
-PYTHON_DOTENV_DISABLED=1 python evaluation/run_regression.py
 python -m ruff check app api frontend tests scripts main.py
 ```
 
 These exercise deterministic engineering fixtures, including the historical synthetic P4
 split; they do not run a real-model held-out study. See the evidence bundle for actual
 commands/results, environment limits and any failures. No static type checker is configured.
+The public checkout contains portable engineering tests and the historical synthetic
+evaluation fixtures. The local 689-test suite and 283-case regression entry also depend on
+private frozen/reviewer material; their recorded passes are not claimed to be the public
+checkout's test count. `evaluation/run_regression.py` preserves that full local entry and
+requires those private inputs; use the public `pytest` command above for this snapshot.
 
 ## Limitations and roadmap
 
@@ -189,10 +217,10 @@ not transparently resumed. Current corpus/company aliases are narrow. Demo decis
 scripted. Semantic correctness, real-model prompt-injection resistance and risk calibration
 remain unproven. This is not investment advice or a trading system.
 
-Next: complete source/gold review and evaluation protocol adoption; obtain reviewed
-real-provider development evidence before a valid held-out study; then seek H4. P5 Docker
-reproduction and full v1 acceptance follow only after their prerequisites. No hosted service
-or v1.0 release accompanies this snapshot.
+H4/H5 approval is recorded against the preserved P4/P5 artifacts. Quantitative semantic
+scores, broader development coverage and independent replication remain future work.
+GitHub publication is authorized for the checked snapshot; hosted service deployment needs
+a runtime platform and configuration. This remains a pre-v1 release with explicit limitations.
 
 ## References and attribution
 

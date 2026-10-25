@@ -12,7 +12,16 @@ def ratio(numerator,denominator):
             'status':'MEASURED' if denominator else 'N/A'}
 
 
-def score(case,output,evidence_ids):
+def score(case,output,evidence_ids,*,human_review=None,scoring_version=None,context=None):
+    if scoring_version is not None:
+        from evaluation.contract_scoring import VERSION as CONTRACT_VERSION
+        from evaluation.contract_scoring import score_contract
+        if scoring_version != CONTRACT_VERSION:
+            raise ValueError('unknown_scoring_overlay')
+        return score_contract(case,output,evidence_ids,human_review,context=context)
+    if case.get('scoring_version'):
+        from evaluation.candidate_scoring import score_candidate
+        return score_candidate(case,output,evidence_ids,human_review)
     if output['status']=='failed':
         return {'status':'failed','metrics':{},'unresolved_claims':[], 'reason':'Failed arm retained; quality metrics N/A, coverage reports failure.'}
     claims=output['claims'];by_metric={m.get('metric_id'):m for m in output['metrics']}
@@ -65,6 +74,13 @@ def score(case,output,evidence_ids):
 
 
 def aggregate(records):
+    from evaluation.contract_scoring import VERSION as CONTRACT_VERSION
+    from evaluation.contract_scoring import aggregate_contract
+    if any(r.get('score',{}).get('scorer_version') == CONTRACT_VERSION for r in records):
+        return aggregate_contract(records)
+    if any(r.get('score',{}).get('scorer_version') for r in records):
+        from evaluation.candidate_scoring import aggregate_candidate
+        return aggregate_candidate(records)
     result={}
     for arm in ('A','B','C','D','C_REPAIR'):
         rows=[r for r in records if r['arm']==arm]

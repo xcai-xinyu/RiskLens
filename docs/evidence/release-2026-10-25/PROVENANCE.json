@@ -1,0 +1,56 @@
+{
+  "HUMAN_APPROVALS.json": {
+    "local_source": "evaluation/audit/P5/attempt-004/HUMAN_APPROVALS.json",
+    "original_sha256": "4aebb0942a3286af4ab17f6a653e786dda7c38582205d1f391d0e0bd75889467",
+    "public_sha256": "4aebb0942a3286af4ab17f6a653e786dda7c38582205d1f391d0e0bd75889467",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "P5_REVIEW.md": {
+    "local_source": "evaluation/audit/P5/attempt-003/REVIEW.md",
+    "original_sha256": "764c0bdb8e72818de23291f31b2627ae69e488632978cdd1ee89e01efc423ac8",
+    "public_sha256": "3828ee5239b7c58d36a9caa07371db5cfe92626c900fd47f68ee38cca6eb7125",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "DEMO_REPORT.json": {
+    "local_source": "evaluation/audit/P5/attempt-003/DEMO_REPORT.json",
+    "original_sha256": "c94e502967ddfad27cfaf617e8590eece9ca860b3bdfbdfb19a4a6363d84ee0f",
+    "public_sha256": "c94e502967ddfad27cfaf617e8590eece9ca860b3bdfbdfb19a4a6363d84ee0f",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "DEMO_REPORT.md": {
+    "local_source": "evaluation/audit/P5/attempt-003/DEMO_REPORT.md",
+    "original_sha256": "7adc1c4198b5854fe14d539907da7765d83590fd8ddb813964bebb1ec82c6bb5",
+    "public_sha256": "7adc1c4198b5854fe14d539907da7765d83590fd8ddb813964bebb1ec82c6bb5",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "docker-build.txt": {
+    "local_source": "evaluation/audit/P5/attempt-003/docker-build-final.txt",
+    "original_sha256": "8b78390ade0e6c93bc8e27343d482f1666654d08f276c03202151e6a62db653b",
+    "public_sha256": "7c0b778063275b2d95c141ea75c7c08b777568f20b87ec0e9c1c24681e7ff409",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer; terminal CR/progress line endings and trailing whitespace normalized in publication copy"
+  },
+  "container-health.txt": {
+    "local_source": "evaluation/audit/P5/attempt-003/health-recreated.txt",
+    "original_sha256": "09985818cbd8d59238e293f49dc509bc816b74c5fec1974e9f035d33c538f5fc",
+    "public_sha256": "b66f851e7d92c86f0456894cbeafb51fffe9ef6ace4cf83aad2a60737df8c8bf",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "persistence.txt": {
+    "local_source": "evaluation/audit/P5/attempt-003/persistence.txt",
+    "original_sha256": "c1c02058de7cd3e1b7c77e2b21acac0c49bd53df8d5c81142452e796ebe379dc",
+    "public_sha256": "c1c02058de7cd3e1b7c77e2b21acac0c49bd53df8d5c81142452e796ebe379dc",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "UI_SMOKE.json": {
+    "local_source": "evaluation/audit/P5/attempt-003/UI_SMOKE.json",
+    "original_sha256": "ed624292ce6bfb8ab573a89fe7f169b35a1a395f4d5e6639c497e95332a2170e",
+    "public_sha256": "ed624292ce6bfb8ab573a89fe7f169b35a1a395f4d5e6639c497e95332a2170e",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer"
+  },
+  "p4-ten-case-results.csv": {
+    "local_source": "docs/evidence/p4-ten-case-results.csv",
+    "original_sha256": "5b3a374f541bf74118dcb205e969e8d8bb1d723af6a37671be3e49aadf62b988",
+    "public_sha256": "aed745f12fa15ee2bf4b971c1e77317bb4b52fc04a720771d5712ba19dc79a84",
+    "redactions": "workstation paths and non-loopback Streamlit discovery addresses normalized; historical review prefixed with current approval pointer; publication copy uses LF CSV line endings; cells unchanged"
+  }
+}

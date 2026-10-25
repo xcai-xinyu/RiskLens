@@ -1,0 +1,47 @@
+{
+  "recorded_at_utc": "2026-10-25T03:20:27.288981+00:00",
+  "recorded_at_local": "2026-10-25T11:20:27.288981+08:00",
+  "reviewer": "project user/current conversation",
+  "source": "latest explicit user instruction",
+  "user_attestation": "我已完成人工审阅和 demo 复现，确认 H4、H5 通过。",
+  "decisions": [
+    {
+      "gate": "H4",
+      "decision": "APPROVED",
+      "reviewed_attempt": "P4/attempt-047",
+      "scope": "authorized fixed ten-case Microsoft/Walmart A/B/D/C result set, recorded version/exposure differences, evidence and research review"
+    },
+    {
+      "gate": "H5",
+      "decision": "APPROVED",
+      "reviewed_attempt": "P5/attempt-003",
+      "scope": "recorded container build, health, keyless demo, persistence and documentation"
+    }
+  ],
+  "technical_evidence": {
+    "P4/attempt-047": {
+      "files_checked": 162,
+      "mismatches": [],
+      "manifest_sha256": "e531862450d4a17a7aa40ad9cd871cc3733e5f939932d67845211a8e48a5a603"
+    },
+    "P5/attempt-003": {
+      "files_checked": 64,
+      "mismatches": [],
+      "manifest_sha256": "f9bead3fd278718a4855b0da5399d79b7d84624e41aa02ec146d1b6c1f439a99"
+    }
+  },
+  "human_demo_reproduction": "CONFIRMED_BY_USER",
+  "individual_sample_ids": "NOT_PROVIDED",
+  "per_assessment_cell_values": "NOT_PROVIDED; historical 1850 pending cells are not silently filled or scored",
+  "verifier_improvement": "NOT_ESTABLISHED_BY_APPROVAL",
+  "publication_authorization": {
+    "github_repository": "https://github.com/xcai-xinyu/RiskLens",
+    "commit_push": true,
+    "github_release": true,
+    "public_service_deployment": "authorized in principle; no runtime platform/account/domain supplied",
+    "new_paid_api_runs": false,
+    "paid_hosting_resources": false
+  },
+  "prior_sealed_records_unchanged": true,
+  "earlier_approval_recording_interruption": "Unsealed attempt-004 was empty. Earlier record-generation check raced with status-document editing and failed on README.md before writing an approval record; preserve this fact rather than claim that partial operation completed."
+}

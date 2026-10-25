@@ -1,8 +1,11 @@
 """Fixed deterministic regression, with only implemented P0/P1/P2/P3 cases activated."""
+import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -43,5 +46,33 @@ selectors.append('tests/test_p4.py')
 selectors.append('tests/test_providers.py')
 selectors.append('tests/test_environment.py')
 selectors.append('tests/test_p4_usage.py')
-raise SystemExit(subprocess.run([sys.executable,'-m','pytest','-q',*selectors,*sys.argv[1:]],cwd=ROOT,
-                               check=False,timeout=300).returncode)
+selectors.append('tests/test_p4_candidate.py')
+selectors.append('tests/test_p4_finalization.py')
+selectors.append('tests/test_p4_freeze_repairs.py')
+parser = argparse.ArgumentParser(add_help=False)
+parser.add_argument('--audit-dir', type=Path)
+options, pytest_args = parser.parse_known_args()
+env = dict(os.environ)
+extra = []
+if options.audit_dir:
+    directory = options.audit_dir.resolve()
+    directory.mkdir(parents=True, exist_ok=True)
+    env['RISKLENS_REGRESSION_TIMING'] = str(directory / 'timing.json')
+    extra = ['-p', 'evaluation.regression_timing', '-vv', '--durations=0',
+             '--junitxml=' + str(directory / 'junit.xml')]
+command = [sys.executable, '-X', 'importtime', '-m', 'pytest', *selectors, *extra, *pytest_args]
+started = time.monotonic()
+code = 1
+reason = None
+try:
+    code = subprocess.run(command, cwd=ROOT, env=env, check=False, timeout=600).returncode
+except subprocess.TimeoutExpired:
+    reason = 'offline_regression_total_timeout_600s'
+finally:
+    if options.audit_dir:
+        (directory / 'entry.json').write_text(json.dumps({
+            'command': command, 'selectors': selectors, 'timeout_seconds': 600,
+            'elapsed_seconds': time.monotonic() - started, 'exit_code': code,
+            'error': reason, 'single_process_order': True,
+        }, indent=2))
+raise SystemExit(code)

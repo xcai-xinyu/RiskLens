@@ -47,7 +47,7 @@ async def research(request, settings, *, corpus=None, directory=None, adapter=No
     if stage == 'P2':
         from app.p2_adapter import DemoP2Adapter
         from app.p2_contracts import P2State
-        from app.p2_workflow import P2Workflow
+        from app.p2_workflow_v2 import P2Workflow
         adapter = adapter or (DemoP2Adapter() if request.mode=='demo' else make_chat_adapter(stage='P2', max_calls=settings.max_llm_calls))
     adapter = adapter or (DemoResearchAdapter() if request.mode=='demo' else make_chat_adapter(stage='P1', max_calls=settings.max_llm_calls))
     embedding = embedding or (LocalEmbedding() if request.mode=='demo' else APIEmbedding())

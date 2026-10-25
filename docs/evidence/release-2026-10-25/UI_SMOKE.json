@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "scope": "Streamlit AppTest in UI container with real HTTP API; no HTTP mocks",
+  "run_id": "5a8a822e-8700-45e1-9469-f09e95ff6913",
+  "sections": [
+    "Claims & Evidence",
+    "Gaps & Conflicts",
+    "Metrics",
+    "Research progress",
+    "Risk Factors",
+    "Risk Overview"
+  ],
+  "citations": 5,
+  "calculations": 5,
+  "history": "PASS",
+  "human_browser_review": "NOT_PERFORMED",
+  "paid_requests": 0
+}

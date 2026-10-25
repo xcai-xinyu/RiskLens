@@ -16,8 +16,9 @@ are retained in engineering fixtures. Those excerpts are not a replacement for t
 
 The document was acquired in October 2026. Its historical publication-day byte equivalence
 has not been independently certified. `published_at` and `retrieved_at` have distinct meanings.
-The separate v3 Form 10-K candidates and original PDF/date/page reviews remain local and
-unapproved; they are not represented as this demo's source validation.
+The separate v3 Form 10-K materials and detailed reviews remain local. H4 approval of the
+reviewed evaluation does not replace this demo's source provenance or certify every historical
+publication-day byte equivalence.
 
 ## Synthetic fixtures and evaluation separation
 
@@ -27,7 +28,8 @@ authored engineering fixtures, clearly marked synthetic. `p4-v2` preserves its o
 Its labels are `PROPOSED_H4`, not approved financial gold. Public synthetic cases test
 software behavior; they are not private held-out evidence of research quality. They are
 not used to tune the real-company candidate set. The latter's annotations and materials
-are excluded from this publication; no held-out experiment is run for this release.
+are excluded from this publication. The already completed ten-case real-company evaluation
+is summarized separately; no new held-out experiment is run to prepare this release.
 
 Two historical files are retained unchanged because tests depend on their exact bytes:
 `evaluation/audit/P2/attempt-002/artifacts/examples/synthetic_report.json` and

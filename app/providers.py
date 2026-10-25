@@ -30,7 +30,7 @@ def classify_error(error):
     for _ in range(5):
         status = getattr(current, 'status_code', None)
         code = getattr(current, 'code', None)
-        if code in ('insufficient_quota', 'billing_hard_limit_reached', 'credits_exhausted',
+        if code in ('insufficient_quota', 'billing_hard_limit_reached', 'credits_exhausted', 'credit_balance_exhausted',
                     'billing_not_active') or status == 402:
             return ProviderFailure('provider_insufficient_balance', status=status)
         if status == 429:
@@ -39,6 +39,8 @@ def classify_error(error):
             return ProviderFailure('provider_authentication' if status == 401 else 'provider_permission', status=status)
         if status == 404:
             return ProviderFailure('provider_model_not_found', status=status)
+        if status == 413 or code == 'context_length_exceeded':
+            return ProviderFailure('provider_context_limit', status=status)
         if status == 400:
             return ProviderFailure('provider_invalid_request', status=status)
         if isinstance(current, TimeoutError) or type(current).__name__ == 'APITimeoutError':
@@ -70,6 +72,10 @@ def make_chat_adapter(*, stage='P2', provider=None, max_calls=10):
     selected, _, _, _ = chat_configuration(provider)
     if stage not in ('P1', 'P2'):
         raise ValueError('stage_invalid')
+    if selected == 'openai' and os.environ.get('LLM_MODEL') == 'gpt-6.1-sol':
+        from app.configured_adapters import ProviderSettings
+        from app.openai_responses import OpenAIResponsesAdapter
+        return OpenAIResponsesAdapter(ProviderSettings.from_env(), max_calls=max_calls, stage=stage)
     classes = {('openai', 'P1'): OpenAIResearchAdapter, ('groq', 'P1'): GroqResearchAdapter,
                ('openai', 'P2'): OpenAIP2Adapter, ('groq', 'P2'): GroqP2Adapter}
     return classes[selected, stage](max_calls=max_calls)

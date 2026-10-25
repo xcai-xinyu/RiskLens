@@ -15,6 +15,15 @@ class DemoP2Adapter(DemoResearchAdapter):
         super().__init__()
         self.verifier_fixture = json.loads((ROOT/'tests/fixtures/p2_semantic_v1.json').read_text())
 
+    async def make_plan(self, request, company_id):
+        from app.tools.metrics import FORMULAS
+        plan = await super().make_plan(request, company_id)
+        # Preserve this explicit demo's existing five missing-input diagnostics.
+        # Real empty plans are no longer silently expanded by the workflow.
+        if 'liquidity' in request.risk_categories:
+            plan.required_metrics = list(FORMULAS)
+        return plan
+
     async def extract(self, request, evidence, required_metrics):
         # Coinbase fixed demo does not bind these five formulas' required inputs.
         # Missing data remains missing; unit tests exercise actual calculations.
