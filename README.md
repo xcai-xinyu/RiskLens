@@ -1,6 +1,6 @@
 # RiskLens — Evidence-Aware Financial Risk Research Agent
 
-**pre-v1 · 10-case P4 execution sealed · H4/H5 approved · quantified quality claims remain limited**
+**pre-v1 · 50-case P4 execution sealed · H4/H5 approved · quantified quality claims remain limited**
 
 The publication snapshot includes the completed P4/P5 engineering scope and the owner's
 H4/H5 approval. Private source files, reserve questions and raw audit logs remain local.
